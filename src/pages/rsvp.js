@@ -15,31 +15,41 @@ const RSVPPage = () => (
           <FormattedMessage id="rsvp" />
         </h2>
 
-        <form name="contact" method="POST" netlify>
+        <form name="rsvp" method="POST" netlify>
+          <input type="hidden" name="form-name" value="rsvp" />
           <p>
             <label>
-              Your Name: <input type="text" name="name" />
+              Name: <input type="text" name="name" />
             </label>
           </p>
           <p>
             <label>
-              Your Email: <input type="email" name="email" />
+              Email: <input type="text" name="name" />
             </label>
           </p>
-          <p>
+
+          <fieldset>
+            <legend>
+              Will you and your invitee(s) be able to make it to the wedding?
+            </legend>
             <label>
-              Your Role:{" "}
-              <select name="role[]" multiple>
-                <option value="leader">Leader</option>
-                <option value="follower">Follower</option>
-              </select>
+              {" "}
+              <input type="radio" />
+              Yes
             </label>
-          </p>
+            <label>
+              {" "}
+              <input type="radio" />
+              No
+            </label>
+          </fieldset>
+
           <p>
             <label>
               Message: <textarea name="message" />
             </label>
           </p>
+          <div data-netlify-recaptcha />
           <p>
             <button type="submit">Send</button>
           </p>
