@@ -15,11 +15,16 @@ import {
 import SEO from "../components/common/SEO";
 import Header from "../components/theme/Header";
 
-function encode(data) {
+const encode = data => {
   return Object.keys(data)
     .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
     .join("&");
-}
+};
+
+const count = str => {
+  const length = str.split(",").length;
+  return length;
+};
 
 class RSVPPage extends React.Component {
   state = {
@@ -49,6 +54,7 @@ class RSVPPage extends React.Component {
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: encode({
         "form-name": form.getAttribute("name"),
+        "guest-count": count(this.state.guests),
         ...this.state
       })
     })
