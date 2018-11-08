@@ -93,7 +93,7 @@ const RSVPPage = () => (
                   </Text>
                   <Field>
                     <textarea
-                      name="Message"
+                      name="Guests"
                       placeholder="Comma-separated list of names"
                     />
                   </Field>
@@ -107,7 +107,7 @@ const RSVPPage = () => (
                     Song Requests
                   </Text>
                   <Field>
-                    <textarea name="Message" />
+                    <textarea name="Songs" />
                   </Field>
                 </Label>
               </Field>
