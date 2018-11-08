@@ -26,22 +26,17 @@ class RSVPPage extends React.Component {
     selectedOption: ""
   };
 
-  handleOptionChange = e => {
-    this.setState({
-      selectedOption: e.currentTarget.value
-    });
-  };
-
   handleChange = e => {
-    this.setState({ [e.target.name]: e.target.value });
+    console.log(e.target.value);
+    this.setState({
+      [e.target.name]: e.target.value,
+      selectedOption: e.target.value
+    });
   };
 
   handleSubmit = e => {
     e.preventDefault();
     const form = e.target;
-    {
-      console.log(...this.state);
-    }
 
     fetch("/", {
       method: "POST",
@@ -124,7 +119,7 @@ class RSVPPage extends React.Component {
                           name="attend"
                           value="yes"
                           checked={this.state.selectedOption === "yes"}
-                          onChange={this.handleOptionChange}
+                          onChange={this.handleChange}
                         />
                         Yes
                       </Label>
@@ -137,7 +132,7 @@ class RSVPPage extends React.Component {
                           name="attend"
                           value="no"
                           checked={this.state.selectedOption === "no"}
-                          onChange={this.handleOptionChange}
+                          onChange={this.handleChange}
                           required
                         />
                         No
