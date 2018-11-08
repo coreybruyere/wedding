@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { Heading } from "rebass";
 import { FormattedMessage } from "react-intl";
 import { Layout, Container } from "../components/common";
 import SEO from "../components/common/SEO";
@@ -11,9 +12,9 @@ const DetailsPage = () => (
       <SEO title="wedding details" />
       <Header />
       <Welcome as={Container}>
-        <h2>
+        <Heading as="h1">
           <FormattedMessage id="wedding details" />
-        </h2>
+        </Heading>
       </Welcome>
     </React.Fragment>
   </Layout>

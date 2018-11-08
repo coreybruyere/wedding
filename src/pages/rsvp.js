@@ -1,7 +1,17 @@
 import React from "react";
 import styled from "styled-components";
+import { Flex, Box, Text, Heading } from "rebass";
+import NetlifyForm from "react-netlify-form";
 import { FormattedMessage } from "react-intl";
-import { Layout, Container } from "../components/common";
+import {
+  Layout,
+  Container,
+  Field,
+  Input,
+  Label,
+  Link,
+  Button
+} from "../components/common";
 import SEO from "../components/common/SEO";
 import Header from "../components/theme/Header";
 
@@ -11,54 +21,117 @@ const RSVPPage = () => (
       <SEO title="rsvp" />
       <Header />
       <Welcome as={Container}>
-        <h2>
+        <Heading as="h1">
           <FormattedMessage id="rsvp" />
-        </h2>
+        </Heading>
 
-        <form
-          name="rsvp"
-          method="POST"
-          data-netlify="true"
-          data-netlify-honeypot="bot-field"
-        >
-          <input type="hidden" name="form-name" value="rsvp" />
-          <p>
-            <label>
-              Name: <input type="text" name="name" />
-            </label>
-          </p>
-          <p>
-            <label>
-              Email: <input type="text" name="name" />
-            </label>
-          </p>
-
-          <fieldset>
-            <legend>
-              Will you and your invitee(s) be able to make it to the wedding?
-            </legend>
-            <label>
-              {" "}
-              <input type="radio" />
-              Yes
-            </label>
-            <label>
-              {" "}
-              <input type="radio" />
-              No
-            </label>
-          </fieldset>
-
-          <p>
-            <label>
-              Message: <textarea name="message" />
-            </label>
-          </p>
-          <div data-netlify-recaptcha />
-          <p>
-            <button type="submit">Send</button>
-          </p>
-        </form>
+        <NetlifyForm name="Contact Form">
+          {({ loading, error, success }) => (
+            <div>
+              {loading && <div>Loading...</div>}
+              {error && (
+                <div>
+                  Your information was not sent. Please try again later or
+                  <Link href="mailto:hello@coreybruyere.com">
+                    email Corey
+                  </Link>{" "}
+                  and tell him how awful he is at building websites.
+                </div>
+              )}
+              {success && (
+                <div>
+                  Thank you for your RSVP! Feel free to contact us if you have
+                  any questions!
+                </div>
+              )}
+              {!loading &&
+                !success && (
+                  <Flex mx={-2} flexWrap="wrap">
+                    <Box px={2} width={1 / 2}>
+                      <Field>
+                        <Label>
+                          <Text fontSize={1} fontWeight="bold" color="#616161">
+                            First Name
+                          </Text>
+                          <input type="text" name="first-name" required />
+                        </Label>
+                      </Field>
+                    </Box>
+                    <Box px={2} width={1 / 2}>
+                      <Field>
+                        <Label>
+                          <Text fontSize={1} fontWeight="bold" color="#616161">
+                            Last Name
+                          </Text>
+                          <input type="text" name="last-name" required />
+                        </Label>
+                      </Field>
+                    </Box>
+                    <Box px={2} width={1 / 2}>
+                      <fieldset>
+                        <legend>Will you be attending?</legend>
+                        <Field>
+                          <Label>
+                            <input
+                              type="radio"
+                              id="yes"
+                              name="attend"
+                              value="yes"
+                              checked
+                              required
+                            />
+                            Yes
+                          </Label>
+                        </Field>
+                        <Field>
+                          <Label>
+                            <input
+                              type="radio"
+                              id="no"
+                              name="attend"
+                              value="no"
+                              checked
+                            />
+                            No
+                          </Label>
+                        </Field>
+                      </fieldset>
+                    </Box>
+                    <Box px={2} width={1}>
+                      <Field>
+                        <Label>
+                          <Text fontSize={1} fontWeight="bold" color="#616161">
+                            Full Names of Additional Guests
+                          </Text>
+                          <Field>
+                            <textarea
+                              name="Message"
+                              placeholder="Comma-separated list of names"
+                            />
+                          </Field>
+                        </Label>
+                      </Field>
+                    </Box>
+                    <Box px={2} width={1}>
+                      <Field>
+                        <Label>
+                          <Text fontSize={1} fontWeight="bold" color="#616161">
+                            Song Requests
+                          </Text>
+                          <Field>
+                            <textarea name="Message" />
+                          </Field>
+                        </Label>
+                      </Field>
+                    </Box>
+                    <Box px={2} width={1}>
+                      <Button type="submit">Submit</Button>
+                    </Box>
+                  </Flex>
+                )}
+            </div>
+          )}
+        </NetlifyForm>
       </Welcome>
     </React.Fragment>
   </Layout>
