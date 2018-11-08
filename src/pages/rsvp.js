@@ -25,7 +25,7 @@ const RSVPPage = () => (
           <FormattedMessage id="rsvp" />
         </Heading>
 
-        <NetlifyForm name="Contact Form">
+        <NetlifyForm name="RSVP-Form">
           {({ loading, error, success }) => (
             <div>
               {loading && <div>Loading...</div>}
