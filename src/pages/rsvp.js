@@ -115,6 +115,20 @@ class RSVPPage extends React.Component {
                   </Field>
                 </Box>
                 <Box px={2} width={1 / 2}>
+                  <Field>
+                    <Label>
+                      <Text fontSize={1} fontWeight="bold" color="#616161">
+                        Email
+                      </Text>
+                      <input
+                        type="text"
+                        name="email"
+                        onChange={this.handleChange}
+                      />
+                    </Label>
+                  </Field>
+                </Box>
+                <Box px={2} width={1 / 2}>
                   <fieldset>
                     <legend>Will you be attending?</legend>
                     <Field>
@@ -154,7 +168,7 @@ class RSVPPage extends React.Component {
                       </Text>
                       <Field>
                         <textarea
-                          name="Guests"
+                          name="guests"
                           placeholder="Comma-separated list of names"
                           onChange={this.handleChange}
                         />
@@ -169,7 +183,7 @@ class RSVPPage extends React.Component {
                         Song Requests
                       </Text>
                       <Field>
-                        <textarea name="Songs" onChange={this.handleChange} />
+                        <textarea name="songs" onChange={this.handleChange} />
                       </Field>
                     </Label>
                   </Field>
