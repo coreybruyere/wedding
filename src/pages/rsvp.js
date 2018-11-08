@@ -54,7 +54,7 @@ class RSVPPage extends React.Component {
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: encode({
         "form-name": form.getAttribute("name"),
-        "guest-count": count(this.state.guests),
+        "guest-count": !this.state.guests ? null : count(this.state.guests),
         ...this.state
       })
     })
