@@ -23,14 +23,20 @@ function encode(data) {
 
 class RSVPPage extends React.Component {
   state = {
-    selectedOption: ""
+    attend: ""
+  };
+
+  handleOptionChange = e => {
+    console.log(e.target.value);
+    this.setState({
+      attend: e.target.value
+    });
   };
 
   handleChange = e => {
     console.log(e.target.value);
     this.setState({
-      [e.target.name]: e.target.value,
-      selectedOption: e.target.value
+      [e.target.name]: e.target.value
     });
   };
 
@@ -118,8 +124,8 @@ class RSVPPage extends React.Component {
                           id="yes"
                           name="attend"
                           value="yes"
-                          checked={this.state.selectedOption === "yes"}
-                          onChange={this.handleChange}
+                          checked={this.state.attend === "yes"}
+                          onChange={this.handleOptionChange}
                         />
                         Yes
                       </Label>
@@ -131,8 +137,8 @@ class RSVPPage extends React.Component {
                           id="no"
                           name="attend"
                           value="no"
-                          checked={this.state.selectedOption === "no"}
-                          onChange={this.handleChange}
+                          checked={this.state.attend === "no"}
+                          onChange={this.handleOptionChange}
                           required
                         />
                         No
