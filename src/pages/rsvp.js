@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { Flex, Box, Text, Heading } from "rebass";
-import { navigateTo } from "gatsby-link";
+import { navigate } from "gatsby-link";
 import { FormattedMessage } from "react-intl";
 import {
   Layout,
@@ -22,7 +22,15 @@ function encode(data) {
 }
 
 class RSVPPage extends React.Component {
-  state = {};
+  state = {
+    selectedOption: ""
+  };
+
+  handleOptionChange = e => {
+    this.setState({
+      selectedOption: e.currentTarget.value
+    });
+  };
 
   handleChange = e => {
     this.setState({ [e.target.name]: e.target.value });
@@ -31,6 +39,10 @@ class RSVPPage extends React.Component {
   handleSubmit = e => {
     e.preventDefault();
     const form = e.target;
+    {
+      console.log(...this.state);
+    }
+
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
@@ -39,7 +51,7 @@ class RSVPPage extends React.Component {
         ...this.state
       })
     })
-      .then(() => navigateTo(form.getAttribute("action")))
+      .then(() => navigate(form.getAttribute("action")))
       .catch(error => alert(error));
   };
 
@@ -62,7 +74,7 @@ class RSVPPage extends React.Component {
               data-netlify-honeypot="bot-field"
               onSubmit={this.handleSubmit}
             >
-              <input type="hidden" name="form-name" value="contact" />
+              <input type="hidden" name="form-name" value="rsvp" />
 
               <input
                 type="hidden"
@@ -111,9 +123,8 @@ class RSVPPage extends React.Component {
                           id="yes"
                           name="attend"
                           value="yes"
-                          checked
-                          onChange={this.handleChange}
-                          required
+                          checked={this.state.selectedOption === "yes"}
+                          onChange={this.handleOptionChange}
                         />
                         Yes
                       </Label>
@@ -125,8 +136,9 @@ class RSVPPage extends React.Component {
                           id="no"
                           name="attend"
                           value="no"
-                          checked
-                          onChange={this.handleChange}
+                          checked={this.state.selectedOption === "no"}
+                          onChange={this.handleOptionChange}
+                          required
                         />
                         No
                       </Label>
