@@ -178,6 +178,12 @@ class RSVPPage extends React.Component {
                           placeholder="Comma-separated list of names"
                           onChange={this.handleChange}
                         />
+                        <input
+                          type="text"
+                          name="guest-count"
+                          type="hidden"
+                          onChange={this.handleChange}
+                        />
                       </Field>
                     </Label>
                   </Field>
