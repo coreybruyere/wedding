@@ -89,7 +89,7 @@ class RSVPPage extends React.Component {
                 />
 
                 <Flex mx={-2} flexWrap="wrap">
-                  <Box px={2} width={1 / 2}>
+                  <Box px={2} width={1 / 3}>
                     <Field>
                       <Label>
                         <Text fontSize={1} fontWeight="bold" color="#616161">
@@ -104,7 +104,7 @@ class RSVPPage extends React.Component {
                       </Label>
                     </Field>
                   </Box>
-                  <Box px={2} width={1 / 2}>
+                  <Box px={2} width={1 / 3}>
                     <Field>
                       <Label>
                         <Text fontSize={1} fontWeight="bold" color="#616161">
@@ -119,7 +119,7 @@ class RSVPPage extends React.Component {
                       </Label>
                     </Field>
                   </Box>
-                  <Box px={2} width={1 / 2}>
+                  <Box px={2} width={1 / 3}>
                     <Field>
                       <Label>
                         <Text fontSize={1} fontWeight="bold" color="#616161">
@@ -133,7 +133,7 @@ class RSVPPage extends React.Component {
                       </Label>
                     </Field>
                   </Box>
-                  <Box px={2} width={1 / 2}>
+                  <Box px={2} width={1}>
                     <fieldset>
                       <legend>
                         <FormattedMessage id="will_you_attend" />
@@ -167,7 +167,7 @@ class RSVPPage extends React.Component {
                       </Field>
                     </fieldset>
                   </Box>
-                  <Box px={2} width={1}>
+                  <Box px={2} width={1 / 2}>
                     <Field>
                       <Label>
                         <Text fontSize={1} fontWeight="bold" color="#616161">
@@ -184,7 +184,7 @@ class RSVPPage extends React.Component {
                       </Label>
                     </Field>
                   </Box>
-                  <Box px={2} width={1}>
+                  <Box px={2} width={1 / 2}>
                     <Field>
                       <Label>
                         <Text fontSize={1} fontWeight="bold" color="#616161">
@@ -197,9 +197,11 @@ class RSVPPage extends React.Component {
                     </Field>
                   </Box>
                   <Box px={2} width={1}>
-                    <Button type="submit">
-                      <FormattedMessage id="submit" />
-                    </Button>
+                    <Flex justifyContent="flex-end" width={1}>
+                      <Button type="submit">
+                        <FormattedMessage id="submit" />
+                      </Button>
+                    </Flex>
                   </Box>
                 </Flex>
               </form>
