@@ -1,8 +1,7 @@
 import React from "react";
-import styled from "styled-components";
 import { Heading } from "rebass";
 import { FormattedMessage } from "react-intl";
-import { Layout, Container } from "../components/common";
+import { Layout, Container, Main } from "../components/common";
 import SEO from "../components/common/SEO";
 import Header from "../components/theme/Header";
 
@@ -11,17 +10,15 @@ const DetailsPage = () => (
     <React.Fragment>
       <SEO title="wedding details" />
       <Header />
-      <Welcome as={Container}>
-        <Heading as="h1">
-          <FormattedMessage id="wedding details" />
-        </Heading>
-      </Welcome>
+      <Main>
+        <Container>
+          <Heading as="h1">
+            <FormattedMessage id="wedding details" />
+          </Heading>
+        </Container>
+      </Main>
     </React.Fragment>
   </Layout>
 );
-
-const Welcome = styled.div`
-  padding: 2rem 0;
-`;
 
 export default DetailsPage;

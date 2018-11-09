@@ -7,6 +7,7 @@ import localEs from "../../../../data/es.json";
 import { Context } from "../Context";
 import Provider from "./Provider";
 import { Global } from "./styles";
+import { PageWrap } from "./PageWrap";
 import "./layout.css";
 
 addLocaleData([...en, ...es]);
@@ -21,7 +22,9 @@ const Layout = ({ children }) => (
     <Context.Consumer>
       {({ lang }) => (
         <IntlProvider locale={lang} messages={messages[lang]}>
-          <Global lang={lang}>{children}</Global>
+          <Global lang={lang}>
+            <PageWrap>{children}</PageWrap>
+          </Global>
         </IntlProvider>
       )}
     </Context.Consumer>

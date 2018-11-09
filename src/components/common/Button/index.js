@@ -1,5 +1,3 @@
-import styled from "styled-components";
-
 import React from "react";
 import { Button as Buttony } from "rebass";
 

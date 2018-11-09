@@ -5,15 +5,15 @@ import { Context, Container } from "../../common";
 import SelectLanguage from "./SelectLanguage";
 import { Navbar, Links, StyledHeader, Logo } from "./styles";
 
-const Header = () => (
+const Header = ({ hero }) => (
   <Context.Consumer>
     {({ toggleLanguage, lang }) => (
-      <StyledHeader>
-        <Navbar as={Container}>
+      <StyledHeader hero={hero}>
+        <Navbar flexDirection="column" py={4} as={Container}>
           <Logo as={Link} to="/">
             <FormattedMessage id="logo" />
           </Logo>
-          <Links>
+          <Links flexDirection="column" alignItems="center">
             <Link to="/rsvp">
               <FormattedMessage id="rsvp" />
             </Link>

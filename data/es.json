@@ -2,9 +2,20 @@
   "welcome": "Hola",
   "logo": "Logo",
   "home": "Casa",
+
   "wedding details": "Detalles de la boda",
   "registry": "Registro",
   "rsvp": "RSVP",
   "thanks!": "¡Gracias!",
-  "not_found": "404 - Página no encontrada"
+  "not_found": "404 - Página no encontrada",
+  "first_name": "Nombre de pila",
+  "last_name": "Apellido",
+  "email": "Email",
+  "will_you_attend": "¿Asistirás?",
+  "additional_guests": "Nombres completos de invitados adicionales",
+  "song_requests": "Solicitudes de canciones",
+
+  "submit": "Enviar",
+  "yes": "Sí",
+  "no": "No"
 }

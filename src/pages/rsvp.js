@@ -1,15 +1,13 @@
 import React from "react";
-import styled from "styled-components";
 import { Flex, Box, Text, Heading } from "rebass";
 import { navigate } from "gatsby-link";
 import { FormattedMessage } from "react-intl";
 import {
   Layout,
   Container,
+  Main,
   Field,
-  Input,
   Label,
-  Link,
   Button
 } from "../components/common";
 import SEO from "../components/common/SEO";
@@ -68,147 +66,149 @@ class RSVPPage extends React.Component {
         <React.Fragment>
           <SEO title="rsvp" />
           <Header />
-          <Welcome as={Container}>
-            <Heading as="h1">
-              <FormattedMessage id="rsvp" />
-            </Heading>
+          <Main>
+            <Container>
+              <Heading as="h1">
+                <FormattedMessage id="rsvp" />
+              </Heading>
 
-            <form
-              name="rsvp"
-              method="post"
-              action="/rsvp-success/"
-              data-netlify="true"
-              data-netlify-honeypot="bot-field"
-              onSubmit={this.handleSubmit}
-            >
-              <input type="hidden" name="form-name" value="rsvp" />
+              <form
+                name="rsvp"
+                method="post"
+                action="/rsvp-success/"
+                data-netlify="true"
+                data-netlify-honeypot="bot-field"
+                onSubmit={this.handleSubmit}
+              >
+                <input type="hidden" name="form-name" value="rsvp" />
 
-              <input
-                type="hidden"
-                name="bot-field"
-                onChange={this.handleChange}
-              />
+                <input
+                  type="hidden"
+                  name="bot-field"
+                  onChange={this.handleChange}
+                />
 
-              <Flex mx={-2} flexWrap="wrap">
-                <Box px={2} width={1 / 2}>
-                  <Field>
-                    <Label>
-                      <Text fontSize={1} fontWeight="bold" color="#616161">
-                        First Name
-                      </Text>
-                      <input
-                        type="text"
-                        name="first-name"
-                        onChange={this.handleChange}
-                        required
-                      />
-                    </Label>
-                  </Field>
-                </Box>
-                <Box px={2} width={1 / 2}>
-                  <Field>
-                    <Label>
-                      <Text fontSize={1} fontWeight="bold" color="#616161">
-                        Last Name
-                      </Text>
-                      <input
-                        type="text"
-                        name="last-name"
-                        onChange={this.handleChange}
-                        required
-                      />
-                    </Label>
-                  </Field>
-                </Box>
-                <Box px={2} width={1 / 2}>
-                  <Field>
-                    <Label>
-                      <Text fontSize={1} fontWeight="bold" color="#616161">
-                        Email
-                      </Text>
-                      <input
-                        type="text"
-                        name="email"
-                        onChange={this.handleChange}
-                      />
-                    </Label>
-                  </Field>
-                </Box>
-                <Box px={2} width={1 / 2}>
-                  <fieldset>
-                    <legend>Will you be attending?</legend>
+                <Flex mx={-2} flexWrap="wrap">
+                  <Box px={2} width={1 / 2}>
                     <Field>
                       <Label>
+                        <Text fontSize={1} fontWeight="bold" color="#616161">
+                          <FormattedMessage id="first_name" />
+                        </Text>
                         <input
-                          type="radio"
-                          id="yes"
-                          name="attend"
-                          value="yes"
-                          checked={this.state.attend === "yes"}
-                          onChange={this.handleOptionChange}
-                        />
-                        Yes
-                      </Label>
-                    </Field>
-                    <Field>
-                      <Label>
-                        <input
-                          type="radio"
-                          id="no"
-                          name="attend"
-                          value="no"
-                          checked={this.state.attend === "no"}
-                          onChange={this.handleOptionChange}
+                          type="text"
+                          name="first-name"
+                          onChange={this.handleChange}
                           required
                         />
-                        No
                       </Label>
                     </Field>
-                  </fieldset>
-                </Box>
-                <Box px={2} width={1}>
-                  <Field>
-                    <Label>
-                      <Text fontSize={1} fontWeight="bold" color="#616161">
-                        Full Names of Additional Guests
-                      </Text>
-                      <Field>
-                        <textarea
-                          name="guests"
-                          placeholder="Comma-separated list of names"
+                  </Box>
+                  <Box px={2} width={1 / 2}>
+                    <Field>
+                      <Label>
+                        <Text fontSize={1} fontWeight="bold" color="#616161">
+                          <FormattedMessage id="last_name" />
+                        </Text>
+                        <input
+                          type="text"
+                          name="last-name"
+                          onChange={this.handleChange}
+                          required
+                        />
+                      </Label>
+                    </Field>
+                  </Box>
+                  <Box px={2} width={1 / 2}>
+                    <Field>
+                      <Label>
+                        <Text fontSize={1} fontWeight="bold" color="#616161">
+                          <FormattedMessage id="email" />
+                        </Text>
+                        <input
+                          type="text"
+                          name="email"
                           onChange={this.handleChange}
                         />
-                        <input type="text" name="guest-count" type="hidden" />
-                      </Field>
-                    </Label>
-                  </Field>
-                </Box>
-                <Box px={2} width={1}>
-                  <Field>
-                    <Label>
-                      <Text fontSize={1} fontWeight="bold" color="#616161">
-                        Song Requests
-                      </Text>
+                      </Label>
+                    </Field>
+                  </Box>
+                  <Box px={2} width={1 / 2}>
+                    <fieldset>
+                      <legend>
+                        <FormattedMessage id="will_you_attend" />
+                      </legend>
                       <Field>
-                        <textarea name="songs" onChange={this.handleChange} />
+                        <Label>
+                          <input
+                            type="radio"
+                            id="yes"
+                            name="attend"
+                            value="yes"
+                            checked={this.state.attend === "yes"}
+                            onChange={this.handleOptionChange}
+                          />
+                          <FormattedMessage id="yes" />
+                        </Label>
                       </Field>
-                    </Label>
-                  </Field>
-                </Box>
-                <Box px={2} width={1}>
-                  <Button type="submit">Submit</Button>
-                </Box>
-              </Flex>
-            </form>
-          </Welcome>
+                      <Field>
+                        <Label>
+                          <input
+                            type="radio"
+                            id="no"
+                            name="attend"
+                            value="no"
+                            checked={this.state.attend === "no"}
+                            onChange={this.handleOptionChange}
+                            required
+                          />
+                          <FormattedMessage id="no" />
+                        </Label>
+                      </Field>
+                    </fieldset>
+                  </Box>
+                  <Box px={2} width={1}>
+                    <Field>
+                      <Label>
+                        <Text fontSize={1} fontWeight="bold" color="#616161">
+                          <FormattedMessage id="additional_guests" />
+                        </Text>
+                        <Field>
+                          <textarea
+                            name="guests"
+                            placeholder="Comma-separated list of names"
+                            onChange={this.handleChange}
+                          />
+                          <input type="text" name="guest-count" type="hidden" />
+                        </Field>
+                      </Label>
+                    </Field>
+                  </Box>
+                  <Box px={2} width={1}>
+                    <Field>
+                      <Label>
+                        <Text fontSize={1} fontWeight="bold" color="#616161">
+                          <FormattedMessage id="song_requests" />
+                        </Text>
+                        <Field>
+                          <textarea name="songs" onChange={this.handleChange} />
+                        </Field>
+                      </Label>
+                    </Field>
+                  </Box>
+                  <Box px={2} width={1}>
+                    <Button type="submit">
+                      <FormattedMessage id="submit" />
+                    </Button>
+                  </Box>
+                </Flex>
+              </form>
+            </Container>
+          </Main>
         </React.Fragment>
       </Layout>
     );
   }
 }
-
-const Welcome = styled.div`
-  padding: 2rem 0;
-`;
 
 export default RSVPPage;
