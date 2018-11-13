@@ -6,6 +6,6 @@ export const Container = styled(Box)`
   width: 100%;
 `;
 Container.defaultProps = {
-  ml: "auto",
+  mr: "auto",
   px: 4
 };

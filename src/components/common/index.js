@@ -2,6 +2,7 @@ export * from "./Context";
 export * from "./Layout";
 export * from "./Container";
 export * from "./Main";
+export * from "./Hero";
 export * from "./Button";
 export * from "./Field";
 export * from "./Input";

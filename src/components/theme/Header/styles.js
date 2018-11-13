@@ -13,10 +13,16 @@ const pageStyle = `
   top: 0;
 `;
 
-export const StyledHeader = styled.header.attrs({
+export const Head = styled(Flex).attrs({
   role: "banner"
 })`
-  background-color: red;
+  background-image: linear-gradient(
+    90deg,
+    transparent 8%,
+    #f2ca74 12%,
+    #f2ca74 100%
+  );
+  // background-color: #f2ca74;
 
   @media only screen and (min-width: 48em) {
     order: 1;
@@ -33,21 +39,34 @@ export const StyledHeader = styled.header.attrs({
   }
 `;
 
-export const Navbar = styled(Flex)``;
+export const Navbar = styled(Flex)`
+  height: 100%;
+`;
 
 export const Links = styled(Flex)`
   a {
-    color: #fff;
+    padding: 0.5rem;
+    color: #40461b;
     text-decoration: none;
     font-weight: 400;
-    margin: 0 1rem;
+    font-size: 140%;
     outline: none;
   }
 `;
 
 export const Logo = styled.a`
-  color: #fff;
+  color: #40461b;
   text-decoration: none;
   font-weight: bold;
+  text-align: center;
   outline: none;
 `;
+
+Head.defaultProps = {
+  as: "header",
+  alignItems: "center"
+};
+
+Navbar.defaultProps = {
+  justifyContent: "center"
+};

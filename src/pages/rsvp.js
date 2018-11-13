@@ -136,7 +136,9 @@ class RSVPPage extends React.Component {
                   <Box px={2} width={1}>
                     <fieldset>
                       <legend>
-                        <FormattedMessage id="will_you_attend" />
+                        <Text fontSize={1} fontWeight="bold" color="#616161">
+                          <FormattedMessage id="will_you_attend" />
+                        </Text>
                       </legend>
                       <Field>
                         <Label>

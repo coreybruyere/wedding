@@ -1,24 +1,31 @@
 import React from "react";
-import { Heading } from "rebass";
-import { FormattedMessage } from "react-intl";
-import { Layout, Container, Main } from "../components/common";
+import { graphql } from "gatsby";
+import { Layout, Main, Hero } from "../components/common";
 import SEO from "../components/common/SEO";
 import Header from "../components/theme/Header";
 
-const IndexPage = () => (
+const IndexPage = props => (
   <Layout>
     <React.Fragment>
       <SEO title="welcome" />
       <Header hero />
       <Main hero>
-        <Container>
-          <Heading as="h1">
-            <FormattedMessage id="welcome" />
-          </Heading>
-        </Container>
+        <Hero image={props.data.heroImage.childImageSharp.fluid} />
       </Main>
     </React.Fragment>
   </Layout>
 );
 
 export default IndexPage;
+
+export const pageQuery = graphql`
+  query {
+    heroImage: file(relativePath: { eq: "home.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 2400) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+  }
+`;

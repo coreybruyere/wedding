@@ -1,8 +1,10 @@
 import styled, { css } from "styled-components";
 import { Box } from "rebass";
+import { Container } from "./";
 
 const heroStyle = `
-  background-color: beige;
+  padding-top: 0;
+  padding-bottom: 0;
   height: 100vh;
   grid-column-start: 1;
   grid-column-end: 3;
@@ -12,8 +14,6 @@ const heroStyle = `
 export const Main = styled(Box).attrs({
   role: "main"
 })`
-  background-color: #fff;
-
   ${props =>
     props.hero
       ? css`

@@ -1,19 +1,25 @@
 import React from "react";
 import { Link } from "gatsby";
+import { Box } from "rebass";
 import { FormattedMessage } from "react-intl";
 import { Context, Container } from "../../common";
 import SelectLanguage from "./SelectLanguage";
-import { Navbar, Links, StyledHeader, Logo } from "./styles";
+import { Navbar, Links, Head, Logo } from "./styles";
 
 const Header = ({ hero }) => (
   <Context.Consumer>
     {({ toggleLanguage, lang }) => (
-      <StyledHeader hero={hero}>
-        <Navbar flexDirection="column" py={4} as={Container}>
+      <Head hero={hero}>
+        <Navbar
+          flexDirection="column"
+          py={4}
+          pl="calc(32px + 12%);"
+          as={Container}
+        >
           <Logo as={Link} to="/">
             <FormattedMessage id="logo" />
           </Logo>
-          <Links flexDirection="column" alignItems="center">
+          <Links flexDirection="column" mt="auto" alignItems="center">
             <Link to="/rsvp">
               <FormattedMessage id="rsvp" />
             </Link>
@@ -23,10 +29,12 @@ const Header = ({ hero }) => (
             <Link to="/registry">
               <FormattedMessage id="registry" />
             </Link>
-            {<SelectLanguage lang={lang} toggleLanguage={toggleLanguage} />}
           </Links>
+          <Box mt="auto">
+            <SelectLanguage lang={lang} toggleLanguage={toggleLanguage} />
+          </Box>
         </Navbar>
-      </StyledHeader>
+      </Head>
     )}
   </Context.Consumer>
 );
