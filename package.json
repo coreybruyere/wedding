@@ -19,15 +19,18 @@
     "gatsby-plugin-react-helmet": "^3.0.1",
     "gatsby-plugin-sharp": "^2.0.12",
     "gatsby-plugin-styled-components": "^3.0.0",
+    "gatsby-plugin-typography": "^2.2.1",
     "gatsby-source-filesystem": "^2.0.8",
     "gatsby-transformer-sharp": "^2.1.8",
     "react": "^16.6.1",
     "react-dom": "^16.6.1",
     "react-helmet": "^5.2.0",
     "react-intl": "^2.7.0",
+    "react-typography": "^0.16.13",
     "rebass": "^3.0.0-9",
     "recompose": "^0.30.0",
     "styled-components": "^4.0.0-beta.8-unpure",
+    "typography": "^0.16.17",
     "yup": "^0.26.6"
   },
   "keywords": [

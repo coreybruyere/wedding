@@ -1,5 +1,5 @@
 import React from "react";
-import { Heading } from "rebass";
+import { Text } from "rebass";
 import { FormattedMessage } from "react-intl";
 import { Layout, Container, Main } from "../components/common";
 import SEO from "../components/common/SEO";
@@ -12,9 +12,9 @@ const NotFoundPage = () => (
       <Header />
       <Main>
         <Container>
-          <Heading>
+          <Text>
             <FormattedMessage id="not_found" />
-          </Heading>
+          </Text>
         </Container>
       </Main>
     </React.Fragment>

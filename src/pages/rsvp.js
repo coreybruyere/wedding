@@ -1,5 +1,5 @@
 import React from "react";
-import { Flex, Box, Text, Heading } from "rebass";
+import { Flex, Box, Text } from "rebass";
 import { navigate } from "gatsby-link";
 import { FormattedMessage } from "react-intl";
 import {
@@ -68,9 +68,9 @@ class RSVPPage extends React.Component {
           <Header />
           <Main>
             <Container>
-              <Heading as="h1">
+              <Text as="h1">
                 <FormattedMessage id="rsvp" />
-              </Heading>
+              </Text>
 
               <form
                 name="rsvp"
@@ -92,7 +92,11 @@ class RSVPPage extends React.Component {
                   <Box px={2} width={1 / 3}>
                     <Field>
                       <Label>
-                        <Text fontSize={1} fontWeight="bold" color="#616161">
+                        <Text
+                          fontSize="smaller"
+                          fontWeight="bold"
+                          color="#616161"
+                        >
                           <FormattedMessage id="first_name" />
                         </Text>
                         <input
@@ -107,7 +111,11 @@ class RSVPPage extends React.Component {
                   <Box px={2} width={1 / 3}>
                     <Field>
                       <Label>
-                        <Text fontSize={1} fontWeight="bold" color="#616161">
+                        <Text
+                          fontSize="smaller"
+                          fontWeight="bold"
+                          color="#616161"
+                        >
                           <FormattedMessage id="last_name" />
                         </Text>
                         <input
@@ -122,7 +130,11 @@ class RSVPPage extends React.Component {
                   <Box px={2} width={1 / 3}>
                     <Field>
                       <Label>
-                        <Text fontSize={1} fontWeight="bold" color="#616161">
+                        <Text
+                          fontSize="smaller"
+                          fontWeight="bold"
+                          color="#616161"
+                        >
                           <FormattedMessage id="email" />
                         </Text>
                         <input
@@ -136,7 +148,11 @@ class RSVPPage extends React.Component {
                   <Box px={2} width={1}>
                     <fieldset>
                       <legend>
-                        <Text fontSize={1} fontWeight="bold" color="#616161">
+                        <Text
+                          fontSize="smaller"
+                          fontWeight="bold"
+                          color="#616161"
+                        >
                           <FormattedMessage id="will_you_attend" />
                         </Text>
                       </legend>
@@ -172,7 +188,11 @@ class RSVPPage extends React.Component {
                   <Box px={2} width={1 / 2}>
                     <Field>
                       <Label>
-                        <Text fontSize={1} fontWeight="bold" color="#616161">
+                        <Text
+                          fontSize="smaller"
+                          fontWeight="bold"
+                          color="#616161"
+                        >
                           <FormattedMessage id="additional_guests" />
                         </Text>
                         <Field>
@@ -189,7 +209,11 @@ class RSVPPage extends React.Component {
                   <Box px={2} width={1 / 2}>
                     <Field>
                       <Label>
-                        <Text fontSize={1} fontWeight="bold" color="#616161">
+                        <Text
+                          fontSize="smaller"
+                          fontWeight="bold"
+                          color="#616161"
+                        >
                           <FormattedMessage id="song_requests" />
                         </Text>
                         <Field>

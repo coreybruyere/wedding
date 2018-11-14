@@ -8,7 +8,6 @@ import { Context } from "../Context";
 import Provider from "./Provider";
 import { Global } from "./styles";
 import { PageWrap } from "./PageWrap";
-import "./layout.css";
 
 addLocaleData([...en, ...es]);
 

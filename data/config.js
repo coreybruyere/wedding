@@ -15,7 +15,7 @@ module.exports = {
     google: "https://plus.google.com/u/0/+coreybruyere"
   },
   googleAnalyticsID: "UA-69946534-2",
-  themeColor: "#ddbb5e",
+  themeColor: "#f2ca74",
   backgroundColor: "#6496f6",
   social: {
     facebook: "165244147328608",

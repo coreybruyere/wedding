@@ -11,10 +11,16 @@ module.exports = {
     "gatsby-plugin-catch-links",
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
+    // {
+    //   resolve: "gatsby-plugin-google-fonts",
+    //   options: {
+    //     fonts: ["Cairo", "Roboto"]
+    //   }
+    // },
     {
-      resolve: "gatsby-plugin-google-fonts",
+      resolve: `gatsby-plugin-typography`,
       options: {
-        fonts: ["Cairo", "Roboto"]
+        pathToConfigModule: `src/utils/typography`
       }
     },
     {

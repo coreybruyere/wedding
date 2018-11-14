@@ -1,5 +1,5 @@
 import React from "react";
-import { Heading } from "rebass";
+import { Text } from "rebass";
 import { FormattedMessage } from "react-intl";
 import { Layout, Container, Main } from "../components/common";
 import SEO from "../components/common/SEO";
@@ -12,9 +12,9 @@ const RegistryPage = () => (
       <Header />
       <Main>
         <Container>
-          <Heading as="h1">
+          <Text as="h1">
             <FormattedMessage id="registry" />
-          </Heading>
+          </Text>
         </Container>
       </Main>
     </React.Fragment>

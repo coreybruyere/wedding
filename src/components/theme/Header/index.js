@@ -1,35 +1,32 @@
 import React from "react";
 import { Link } from "gatsby";
-import { Box } from "rebass";
+import { Box, Flex, Text } from "rebass";
 import { FormattedMessage } from "react-intl";
 import { Context, Container } from "../../common";
 import SelectLanguage from "./SelectLanguage";
-import { Navbar, Links, Head, Logo } from "./styles";
+import { Navbar, Link as LinkItem, Head, Logo } from "./styles";
 
 const Header = ({ hero }) => (
   <Context.Consumer>
     {({ toggleLanguage, lang }) => (
       <Head hero={hero}>
-        <Navbar
-          flexDirection="column"
-          py={4}
-          pl="calc(32px + 12%);"
-          as={Container}
-        >
+        <Navbar flexDirection="column" py={4} as={Container}>
           <Logo as={Link} to="/">
-            <FormattedMessage id="logo" />
+            <Text fontSize={4} as="h1">
+              C & T
+            </Text>
           </Logo>
-          <Links flexDirection="column" mt="auto" alignItems="center">
-            <Link to="/rsvp">
+          <Flex flexDirection="column" mt="auto" alignItems="center">
+            <LinkItem as={Link} to="/rsvp">
               <FormattedMessage id="rsvp" />
-            </Link>
-            <Link to="/details">
+            </LinkItem>
+            <LinkItem as={Link} to="/details">
               <FormattedMessage id="wedding details" />
-            </Link>
-            <Link to="/registry">
+            </LinkItem>
+            <LinkItem as={Link} to="/registry">
               <FormattedMessage id="registry" />
-            </Link>
-          </Links>
+            </LinkItem>
+          </Flex>
           <Box mt="auto">
             <SelectLanguage lang={lang} toggleLanguage={toggleLanguage} />
           </Box>
