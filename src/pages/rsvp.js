@@ -8,7 +8,9 @@ import {
   Main,
   Field,
   Label,
-  Button
+  Button,
+  Input,
+  Radio
 } from "../components/common";
 import SEO from "../components/common/SEO";
 import Header from "../components/theme/Header";
@@ -80,30 +82,31 @@ class RSVPPage extends React.Component {
                 data-netlify-honeypot="bot-field"
                 onSubmit={this.handleSubmit}
               >
-                <input type="hidden" name="form-name" value="rsvp" />
+                <Input type="hidden" name="form-name" value="rsvp" />
 
-                <input
+                <Input
                   type="hidden"
                   name="bot-field"
                   onChange={this.handleChange}
                 />
 
                 <Flex mx={-2} flexWrap="wrap">
-                  <Box px={2} width={1 / 3}>
+                  <Box px={2} width={2 / 3}>
                     <Field>
                       <Label>
                         <Text
                           fontSize="smaller"
                           fontWeight="bold"
-                          color="#616161"
+                          color="#403b32"
                         >
-                          <FormattedMessage id="first_name" />
+                          <FormattedMessage id="names" />
                         </Text>
-                        <input
+                        <Input
                           type="text"
-                          name="first-name"
+                          name="names"
                           onChange={this.handleChange}
                           required
+                          placeholder="Full names of guests"
                         />
                       </Label>
                     </Field>
@@ -114,33 +117,15 @@ class RSVPPage extends React.Component {
                         <Text
                           fontSize="smaller"
                           fontWeight="bold"
-                          color="#616161"
+                          color="#403b32"
                         >
-                          <FormattedMessage id="last_name" />
+                          <FormattedMessage id="total_attendees" />
                         </Text>
-                        <input
-                          type="text"
-                          name="last-name"
+                        <Input
+                          type="number"
+                          name="total-guests"
                           onChange={this.handleChange}
                           required
-                        />
-                      </Label>
-                    </Field>
-                  </Box>
-                  <Box px={2} width={1 / 3}>
-                    <Field>
-                      <Label>
-                        <Text
-                          fontSize="smaller"
-                          fontWeight="bold"
-                          color="#616161"
-                        >
-                          <FormattedMessage id="email" />
-                        </Text>
-                        <input
-                          type="text"
-                          name="email"
-                          onChange={this.handleChange}
                         />
                       </Label>
                     </Field>
@@ -151,57 +136,55 @@ class RSVPPage extends React.Component {
                         <Text
                           fontSize="smaller"
                           fontWeight="bold"
-                          color="#616161"
+                          color="#403b32"
                         >
                           <FormattedMessage id="will_you_attend" />
                         </Text>
                       </legend>
-                      <Field>
-                        <Label>
-                          <input
-                            type="radio"
-                            id="yes"
-                            name="attend"
-                            value="yes"
-                            checked={this.state.attend === "yes"}
-                            onChange={this.handleOptionChange}
-                          />
-                          <FormattedMessage id="yes" />
-                        </Label>
-                      </Field>
-                      <Field>
-                        <Label>
-                          <input
-                            type="radio"
-                            id="no"
-                            name="attend"
-                            value="no"
-                            checked={this.state.attend === "no"}
-                            onChange={this.handleOptionChange}
-                            required
-                          />
-                          <FormattedMessage id="no" />
-                        </Label>
-                      </Field>
+                      <Flex justifyContent="space-around">
+                        <Field>
+                          <Label>
+                            <Radio
+                              type="radio"
+                              id="yes"
+                              name="attend"
+                              value="yes"
+                              checked={this.state.attend === "yes"}
+                              onChange={this.handleOptionChange}
+                            />
+                            <FormattedMessage id="yes" />
+                          </Label>
+                        </Field>
+                        <Field>
+                          <Label>
+                            <Radio
+                              type="radio"
+                              id="no"
+                              name="attend"
+                              value="no"
+                              checked={this.state.attend === "no"}
+                              onChange={this.handleOptionChange}
+                              required
+                            />
+                            <FormattedMessage id="no" />
+                          </Label>
+                        </Field>
+                      </Flex>
                     </fieldset>
                   </Box>
+
                   <Box px={2} width={1 / 2}>
                     <Field>
                       <Label>
                         <Text
                           fontSize="smaller"
                           fontWeight="bold"
-                          color="#616161"
+                          color="#403b32"
                         >
-                          <FormattedMessage id="additional_guests" />
+                          <FormattedMessage id="song_requests" />
                         </Text>
                         <Field>
-                          <textarea
-                            name="guests"
-                            placeholder="Comma-separated list of names"
-                            onChange={this.handleChange}
-                          />
-                          <input type="text" name="guest-count" type="hidden" />
+                          <textarea name="songs" onChange={this.handleChange} />
                         </Field>
                       </Label>
                     </Field>
@@ -212,9 +195,9 @@ class RSVPPage extends React.Component {
                         <Text
                           fontSize="smaller"
                           fontWeight="bold"
-                          color="#616161"
+                          color="#403b32"
                         >
-                          <FormattedMessage id="song_requests" />
+                          <FormattedMessage id="message" />
                         </Text>
                         <Field>
                           <textarea name="songs" onChange={this.handleChange} />

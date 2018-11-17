@@ -14,7 +14,7 @@ const Copy = styled(Flex)`
   color: #fff;
   width: 100%;
 
-  @media only screen and (min-width: 48em) {
+  @media only screen and (min-width: 52em) {
     width: calc(100% - 29vw);
   }
 `;
@@ -34,7 +34,7 @@ const Image = styled(Img)`
     width: 100%;
     height: 100%;
 
-    @media only screen and (min-width: 48em) {
+    @media only screen and (min-width: 52em) {
       display: none;
     }
   }
@@ -45,7 +45,7 @@ const Inline = styled(Flex)`
   width: 100%;
   text-align: center;
 
-  @media only screen and (min-width: 48em) {
+  @media only screen and (min-width: 52em) {
     width: auto;
     text-align: left;
   }

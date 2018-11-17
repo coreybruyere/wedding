@@ -24,7 +24,7 @@ export const Head = styled(Flex).attrs({
   //   #f2ca74 100%
   // );
 
-  @media only screen and (min-width: 48em) {
+  @media only screen and (min-width: 52em) {
     order: 1;
     height: 100vh;
 
@@ -37,6 +37,12 @@ export const Head = styled(Flex).attrs({
             ${pageStyle}
           `}
   }
+
+  h1 {
+    margin-bottom: 0.25rem;
+    transform: rotate(2deg);
+    font-size: 2.25rem;
+  }
 `;
 
 export const Navbar = styled(Flex)`
@@ -46,7 +52,7 @@ export const Navbar = styled(Flex)`
 export const Link = styled(Text)`
   position: relative;
   padding: 0 0.25rem;
-  margin-bottom: 1.5rem;
+  margin: 0 .25rem 1.5rem;
   color: #40461b;
   text-decoration: none;
   font-weight: 400;
@@ -67,7 +73,7 @@ export const Link = styled(Text)`
     bottom: 0;
     left: -5%;
     right: -5%;
-    transition: height 0.3s ease;
+    transition: height 0.2s ease-in-out;
     background: repeating-linear-gradient(
       116deg,
       transparent,
@@ -81,7 +87,7 @@ export const Link = styled(Text)`
 `;
 
 export const Logo = styled.a`
-  color: #40461b;
+  color: #403b32;
   text-decoration: none;
   font-weight: bold;
   text-align: center;

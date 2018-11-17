@@ -8,16 +8,16 @@
   "rsvp": "RSVP",
   "thanks!": "Thanks!",
   "not_found": "404 - Page Not Found",
-  "first_name": "First name",
-  "last_name": "Last name",
-  "email": "Email",
+  "names": "Name(s)",
+  "total_attendees": "Total attendees",
   "will_you_attend": "Will you be attending?",
-  "additional_guests": "Full names of additional guests",
   "song_requests": "Song requests",
+  "message": "Message",
+  "rsvp-thanks": "Thank you for your RSVP! Feel free to contact us if you have any questions!",
 
   "submit": "Submit",
-  "yes": "Yes",
-  "no": "No",
+  "yes": "Definitely!",
+  "no": "Regretfully No",
 
   "corey-tori": "Corey & Tori"
 }

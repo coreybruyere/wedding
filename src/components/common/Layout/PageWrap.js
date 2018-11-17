@@ -4,7 +4,7 @@ export const PageWrap = styled.div`
   display: grid;
   grid-template-columns: 100%;
 
-  @media only screen and (min-width: 48em) {
+  @media only screen and (min-width: 52em) {
     // grid-template-columns: 71% 29%;
     grid-template-columns: 75% 25%;
   }

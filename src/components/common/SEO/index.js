@@ -42,7 +42,7 @@ const SEO = ({ location = "", title, intl: { formatMessage } }) => (
 			}`;
       return (
         <Helmet>
-          <html lang={lang} dir={"ltr"} />
+          <html class="Waddup nerds! 💍" lang={lang} dir={"ltr"} />
           <meta
             name="google-site-verification"
             content={config.googleVerification}
