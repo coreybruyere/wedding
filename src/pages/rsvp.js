@@ -6,10 +6,12 @@ import {
   Layout,
   Container,
   Main,
+  Fieldset,
   Field,
   Label,
   Button,
   Input,
+  Textarea,
   Radio
 } from "../components/common";
 import SEO from "../components/common/SEO";
@@ -91,7 +93,7 @@ class RSVPPage extends React.Component {
                 />
 
                 <Flex mx={-2} flexWrap="wrap">
-                  <Box px={2} width={2 / 3}>
+                  <Box px={2} width={[1, 1, 6 / 8]}>
                     <Field>
                       <Label>
                         <Text
@@ -111,7 +113,7 @@ class RSVPPage extends React.Component {
                       </Label>
                     </Field>
                   </Box>
-                  <Box px={2} width={1 / 3}>
+                  <Box px={2} width={[1, 1, 2 / 8]}>
                     <Field>
                       <Label>
                         <Text
@@ -131,7 +133,7 @@ class RSVPPage extends React.Component {
                     </Field>
                   </Box>
                   <Box px={2} width={1}>
-                    <fieldset>
+                    <Fieldset>
                       <legend>
                         <Text
                           fontSize="smaller"
@@ -143,37 +145,33 @@ class RSVPPage extends React.Component {
                       </legend>
                       <Flex justifyContent="space-around">
                         <Field>
-                          <Label>
-                            <Radio
-                              type="radio"
-                              id="yes"
-                              name="attend"
-                              value="yes"
-                              checked={this.state.attend === "yes"}
-                              onChange={this.handleOptionChange}
-                            />
-                            <FormattedMessage id="yes" />
-                          </Label>
+                          <Radio
+                            type="radio"
+                            id="yes"
+                            name="attend"
+                            value="yes"
+                            label={<FormattedMessage id="yes" />}
+                            checked={this.state.attend === "yes"}
+                            onChange={this.handleOptionChange}
+                          />
                         </Field>
                         <Field>
-                          <Label>
-                            <Radio
-                              type="radio"
-                              id="no"
-                              name="attend"
-                              value="no"
-                              checked={this.state.attend === "no"}
-                              onChange={this.handleOptionChange}
-                              required
-                            />
-                            <FormattedMessage id="no" />
-                          </Label>
+                          <Radio
+                            type="radio"
+                            id="no"
+                            name="attend"
+                            value="no"
+                            label={<FormattedMessage id="no" />}
+                            checked={this.state.attend === "no"}
+                            onChange={this.handleOptionChange}
+                            required
+                          />
                         </Field>
                       </Flex>
-                    </fieldset>
+                    </Fieldset>
                   </Box>
 
-                  <Box px={2} width={1 / 2}>
+                  <Box px={2} width={[1, 1, 1 / 2]}>
                     <Field>
                       <Label>
                         <Text
@@ -184,12 +182,12 @@ class RSVPPage extends React.Component {
                           <FormattedMessage id="song_requests" />
                         </Text>
                         <Field>
-                          <textarea name="songs" onChange={this.handleChange} />
+                          <Textarea name="songs" onChange={this.handleChange} />
                         </Field>
                       </Label>
                     </Field>
                   </Box>
-                  <Box px={2} width={1 / 2}>
+                  <Box px={2} width={[1, 1, 1 / 2]}>
                     <Field>
                       <Label>
                         <Text
@@ -200,7 +198,7 @@ class RSVPPage extends React.Component {
                           <FormattedMessage id="message" />
                         </Text>
                         <Field>
-                          <textarea name="songs" onChange={this.handleChange} />
+                          <Textarea name="songs" onChange={this.handleChange} />
                         </Field>
                       </Label>
                     </Field>

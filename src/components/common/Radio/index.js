@@ -1,22 +1,43 @@
 import React from "react";
 import styled from "styled-components";
 import PropTypes from "prop-types";
+import { Label } from "../";
 
 export const Radio = props => {
-  const { checked, disabled } = props;
+  const { checked, disabled, id, label } = props;
 
   return (
     <RadioWrap checked={checked} disabled={disabled}>
-      <RadioInput type="radio" {...props} />
+      <RadioInput type="radio" id={id} {...props} />
+      <RadioLabel htmlFor={id}>{label}</RadioLabel>
     </RadioWrap>
   );
 };
 
+const RadioLabel = styled(Label)`
+  &:before {
+    content: "";
+    background: white;
+    border-radius: 100%;
+    border: 1px solid #c3c3c3;
+    display: inline-block;
+    width: 1.4rem;
+    height: 1.4rem;
+    position: relative;
+    top: -0.1rem;
+    margin-right: 1rem;
+    vertical-align: top;
+    cursor: pointer;
+    text-align: center;
+    transition: all 250ms ease;
+  }
+`;
+
 const RadioWrap = styled.div`
   display: inline-block;
-  color: blue;
   &:hover {
-    ${props => (props.checked || props.disabled ? null : `color: red;`)};
+    cursor: pointer;
+    ${props => (props.checked || props.disabled ? null : `color: #f2ca6b;`)};
   }
 `;
 
@@ -26,12 +47,28 @@ const RadioInput = styled.input`
   position: absolute;
   z-index: 0;
   &:focus {
-    box-shadow: none;
+    + ${RadioLabel} {
+      &:before {
+        outline: none;
+        border-color: rgba(253, 0, 34, 0.25098);
+      }
+    }
   }
-  &:checked ~ svg {
-    color: blue;
+  &:checked {
+    + ${RadioLabel} {
+      &:before {
+        background-color: #f2ca6b;
+        box-shadow: inset 0 0 0 4px #fff;
+      }
+    }
   }
-  &:disabled ~ svg {
-    color: gray;
+  &:disabled {
+    + ${RadioLabel} {
+      &:before {
+        box-shadow: inset 0 0 0 4px #f1f1f1;
+        border-color: #c3c3c3;
+        background: #fff;
+      }
+    }
   }
 `;
