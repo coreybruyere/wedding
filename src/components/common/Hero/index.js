@@ -57,7 +57,7 @@ export const Hero = ({ image }) => (
 
     <Copy alignItems="center">
       <Container mr="auto" ml={0} hero>
-        <Inline flexDirection="column">
+        <Inline flexDirection="column" pt={[3, 3, 0]}>
           <Text fontSize={[6, 8]} as="h1">
             <FormattedMessage id="corey-tori" />
           </Text>

@@ -39,7 +39,7 @@ const renderer = ({ days, hours, minutes, completed }) => {
 
     return (
       <CountWrap as="time" pt={1} justifyContent="center" alignItems="center">
-        <Time fontSize="3rem" pr={1}>
+        <Time fontSize={6} pr={1}>
           {days}
         </Time>{" "}
         Days
