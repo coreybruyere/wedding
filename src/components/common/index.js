@@ -9,6 +9,7 @@ export * from "./Field";
 export * from "./Fieldset";
 export * from "./Input";
 export * from "./Textarea";
+export * from "./Select";
 export * from "./Label";
 export * from "./Radio";
 export * from "./Link";

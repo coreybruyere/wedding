@@ -1,10 +1,10 @@
 import React from "react";
 import { Link } from "gatsby";
-import { Box, Flex, Text } from "rebass";
+import { Box, Flex } from "rebass";
 import { FormattedMessage } from "react-intl";
 import { Context, Container, Count } from "../../common";
 import SelectLanguage from "./SelectLanguage";
-import { Navbar, Link as LinkItem, Head, Logo } from "./styles";
+import { Navbar, Link as LinkItem, Head, HeadTitle } from "./styles";
 
 const Header = ({ hero }) => (
   <Context.Consumer>
@@ -12,7 +12,7 @@ const Header = ({ hero }) => (
       <Head hero={hero}>
         <Navbar flexDirection="column" py={4} as={Container}>
           <Flex flexDirection="column" alignItems="center">
-            <Text as="h1">Our Wedding</Text>
+            <HeadTitle>Our Wedding</HeadTitle>
           </Flex>
           <Count date={`2019-06-30T00:00:00`} />
           <Flex

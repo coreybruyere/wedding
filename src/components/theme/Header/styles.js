@@ -17,12 +17,6 @@ export const Head = styled(Flex).attrs({
   role: "banner"
 })`
   background-color: #f2ca74;
-  // background-image: linear-gradient(
-  //   90deg,
-  //   transparent 8%,
-  //   #f2ca74 12%,
-  //   #f2ca74 100%
-  // );
 
   @media only screen and (min-width: 52em) {
     order: 1;
@@ -37,12 +31,10 @@ export const Head = styled(Flex).attrs({
             ${pageStyle}
           `}
   }
+`;
 
-  h1 {
-    margin-bottom: 0.25rem;
-    transform: rotate(2deg);
-    font-size: 2.25rem;
-  }
+export const HeadTitle = styled(Text)`
+  transform: rotate(1deg);
 `;
 
 export const Navbar = styled(Flex)`
@@ -52,7 +44,7 @@ export const Navbar = styled(Flex)`
 export const Link = styled(Text)`
   position: relative;
   padding: 0 0.25rem;
-  margin: 0 .25rem 1.5rem;
+  margin: 0 0.25rem 1.5rem;
   color: #40461b;
   text-decoration: none;
   font-weight: 400;
@@ -97,6 +89,12 @@ export const Logo = styled.a`
 Head.defaultProps = {
   as: "header",
   alignItems: "center"
+};
+
+HeadTitle.defaultProps = {
+  as: "h1",
+  fontSize: 6,
+  mb: 2
 };
 
 Navbar.defaultProps = {
