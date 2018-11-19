@@ -8,7 +8,13 @@ export const Radio = props => {
 
   return (
     <RadioWrap checked={checked} disabled={disabled}>
-      <RadioInput type="radio" id={id} {...props} />
+      <RadioInput
+        type="radio"
+        id={id}
+        checked={checked}
+        disabled={disabled}
+        {...props}
+      />
       <RadioLabel htmlFor={id}>{radioLabel}</RadioLabel>
     </RadioWrap>
   );
