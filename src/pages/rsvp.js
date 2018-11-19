@@ -38,6 +38,7 @@ class RSVPPage extends React.Component {
     this.setState({
       attend: e.target.value
     });
+    console.log(this.state);
   };
 
   handleChange = e => {
@@ -45,6 +46,7 @@ class RSVPPage extends React.Component {
     this.setState({
       [e.target.name]: e.target.value
     });
+    console.log(this.state);
   };
 
   handleSubmit = e => {
@@ -150,7 +152,7 @@ class RSVPPage extends React.Component {
                             id="yes"
                             name="attend"
                             value="yes"
-                            label={<FormattedMessage id="yes" />}
+                            radioLabel={<FormattedMessage id="yes" />}
                             checked={this.state.attend === "yes"}
                             onChange={this.handleOptionChange}
                           />
@@ -161,7 +163,7 @@ class RSVPPage extends React.Component {
                             id="no"
                             name="attend"
                             value="no"
-                            label={<FormattedMessage id="no" />}
+                            radioLabel={<FormattedMessage id="no" />}
                             checked={this.state.attend === "no"}
                             onChange={this.handleOptionChange}
                             required

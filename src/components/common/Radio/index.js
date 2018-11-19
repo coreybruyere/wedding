@@ -4,12 +4,12 @@ import PropTypes from "prop-types";
 import { Label } from "../";
 
 export const Radio = props => {
-  const { checked, disabled, id, label } = props;
+  const { checked, disabled, id, radioLabel } = props;
 
   return (
     <RadioWrap checked={checked} disabled={disabled}>
       <RadioInput type="radio" id={id} {...props} />
-      <RadioLabel htmlFor={id}>{label}</RadioLabel>
+      <RadioLabel htmlFor={id}>{radioLabel}</RadioLabel>
     </RadioWrap>
   );
 };

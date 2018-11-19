@@ -51,11 +51,13 @@ const Inline = styled(Flex)`
   }
 `;
 
+const DropdownIcon = styled.svg``;
+
 export const Hero = ({ image }) => (
   <>
     <Image fluid={image} />
 
-    <Copy alignItems="center">
+    <Copy flexDirection="column" justifyContent="center" alignItems="center">
       <Container mr="auto" ml={0} hero>
         <Inline flexDirection="column" pt={[3, 3, 0]}>
           <Text fontSize={[6, 8]} as="h1">
@@ -73,6 +75,15 @@ export const Hero = ({ image }) => (
           </Flex>
         </Inline>
       </Container>
+
+      <DropdownIcon
+        viewBox="0 0 24 24"
+        width="24"
+        height="24"
+        fill="currentcolor"
+      >
+        <path d="M7.4,8l4.6,4.6L16.6,8L18,9.4l-6,6l-6-6L7.4,8z" />
+      </DropdownIcon>
     </Copy>
   </>
 );
