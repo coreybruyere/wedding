@@ -34,7 +34,7 @@ class RSVPPage extends React.Component {
   };
 
   handleOptionChange = e => {
-    console.log(e.target.value);
+    console.log(e);
     this.setState({
       attend: e.target.value
     });
@@ -42,11 +42,9 @@ class RSVPPage extends React.Component {
   };
 
   handleChange = e => {
-    console.log(e.target.value);
     this.setState({
       [e.target.name]: e.target.value
     });
-    console.log(this.state);
   };
 
   handleSubmit = e => {
@@ -58,7 +56,7 @@ class RSVPPage extends React.Component {
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: encode({
         "form-name": form.getAttribute("name"),
-        "guest-count": !this.state.guests ? null : count(this.state.guests),
+        // "guest-count": !this.state.guests ? null : count(this.state.guests),
         ...this.state
       })
     })
@@ -147,27 +145,40 @@ class RSVPPage extends React.Component {
                       </legend>
                       <Flex justifyContent="space-around">
                         <Field>
-                          <Radio
-                            type="radio"
-                            id="yes"
-                            name="attend"
-                            value="yes"
-                            radioLabel={<FormattedMessage id="yes" />}
-                            checked={this.state.attend === "yes"}
-                            onChange={this.handleOptionChange}
-                          />
+                          <Label>
+                            <Text
+                              fontSize="smaller"
+                              fontWeight="bold"
+                              color="#403b32"
+                            >
+                              <FormattedMessage id="yes" />
+                            </Text>
+                            <input
+                              type="radio"
+                              id="yes"
+                              name="attend"
+                              value="yes"
+                              onChange={this.handleOptionChange}
+                            />
+                          </Label>
                         </Field>
                         <Field>
-                          <Radio
-                            type="radio"
-                            id="no"
-                            name="attend"
-                            value="no"
-                            radioLabel={<FormattedMessage id="no" />}
-                            checked={this.state.attend === "no"}
-                            onChange={this.handleOptionChange}
-                            required
-                          />
+                          <Label>
+                            <Text
+                              fontSize="smaller"
+                              fontWeight="bold"
+                              color="#403b32"
+                            >
+                              <FormattedMessage id="no" />
+                            </Text>
+                            <input
+                              type="radio"
+                              id="no"
+                              name="attend"
+                              value="no"
+                              onChange={this.handleOptionChange}
+                            />
+                          </Label>
                         </Field>
                       </Flex>
                     </Fieldset>
