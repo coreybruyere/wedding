@@ -15,11 +15,12 @@ export const Radio = props => {
         disabled={disabled}
         {...props}
       />
+      <RadioIcon />
     </RadioWrap>
   );
 };
 
-const RadioLabel = styled(Label)`
+const RadioIcon = styled.div`
   &:before {
     content: "";
     background: white;
@@ -30,7 +31,7 @@ const RadioLabel = styled(Label)`
     height: 1.4rem;
     position: relative;
     top: -0.1rem;
-    margin-right: 1rem;
+    margin-right: 0.75rem;
     vertical-align: top;
     cursor: pointer;
     text-align: center;
@@ -52,7 +53,7 @@ const RadioInput = styled.input`
   position: absolute;
   z-index: 0;
   &:focus {
-    + ${RadioLabel} {
+    + ${RadioIcon} {
       &:before {
         outline: none;
         border-color: rgba(253, 0, 34, 0.25098);
@@ -60,7 +61,7 @@ const RadioInput = styled.input`
     }
   }
   &:checked {
-    + ${RadioLabel} {
+    + ${RadioIcon} {
       &:before {
         background-color: #f2ca6b;
         box-shadow: inset 0 0 0 4px #fff;
@@ -68,7 +69,7 @@ const RadioInput = styled.input`
     }
   }
   &:disabled {
-    + ${RadioLabel} {
+    + ${RadioIcon} {
       &:before {
         box-shadow: inset 0 0 0 4px #f1f1f1;
         border-color: #c3c3c3;

@@ -1,5 +1,9 @@
 import styled from "styled-components";
+import { Flex } from "rebass";
 
-export const Label = styled.label`
-  display: block;
-`;
+export const Label = styled(Flex)``;
+
+Label.defaultProps = {
+  as: "label",
+  flexDirection: "column"
+};

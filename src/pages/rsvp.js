@@ -145,7 +145,14 @@ class RSVPPage extends React.Component {
                       </legend>
                       <Flex justifyContent="space-around">
                         <Field>
-                          <Label>
+                          <Label flexDirection="row">
+                            <Radio
+                              type="radio"
+                              id="yes"
+                              name="attend"
+                              value="yes"
+                              onChange={this.handleOptionChange}
+                            />
                             <Text
                               fontSize="smaller"
                               fontWeight="bold"
@@ -153,17 +160,17 @@ class RSVPPage extends React.Component {
                             >
                               <FormattedMessage id="yes" />
                             </Text>
-                            <input
-                              type="radio"
-                              id="yes"
-                              name="attend"
-                              value="yes"
-                              onChange={this.handleOptionChange}
-                            />
                           </Label>
                         </Field>
                         <Field>
-                          <Label>
+                          <Label flexDirection="row">
+                            <Radio
+                              type="radio"
+                              id="no"
+                              name="attend"
+                              value="no"
+                              onChange={this.handleOptionChange}
+                            />
                             <Text
                               fontSize="smaller"
                               fontWeight="bold"
@@ -171,13 +178,6 @@ class RSVPPage extends React.Component {
                             >
                               <FormattedMessage id="no" />
                             </Text>
-                            <input
-                              type="radio"
-                              id="no"
-                              name="attend"
-                              value="no"
-                              onChange={this.handleOptionChange}
-                            />
                           </Label>
                         </Field>
                       </Flex>
