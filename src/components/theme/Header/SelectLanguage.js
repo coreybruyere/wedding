@@ -1,6 +1,7 @@
 import React from "react";
 import { compose, withStateHandlers } from "recompose";
-import { Select } from "../../common";
+import { Select, Label } from "../../common";
+import { uA11yHide } from "../../../utils/helpers"
 import styled from "styled-components";
 
 const SelectWrap = styled.div`
@@ -8,20 +9,28 @@ const SelectWrap = styled.div`
   margin-right: -32px;
   margin-bottom: -32px;
   overflow: hidden;
-  color: #fff;
+  color: #454130;
 
   select {
     margin-bottom: 0;
     border: 0;
     border-radius: 0;
-    background-color: #b59349;
-    color: #fff;
+    background-color: #e2bc6a;
+    color: #454130;
+  }
+
+  ${Label} {
+    ${uA11yHide};
   }
 `;
 
 const SelectLanguage = ({ selectLanguage, lang }) => (
   <SelectWrap>
-    <Select value={lang} onChange={e => selectLanguage(e.target.value)}>
+    <Label htmlFor="lang-select">Select language</Label>
+    <Select
+      value={lang}
+      onChange={e => selectLanguage(e.target.value)}
+      id="lang-select">
       <option value="en">English</option>
       <option value="es">Español</option>
     </Select>

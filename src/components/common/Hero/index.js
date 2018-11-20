@@ -4,6 +4,7 @@ import Img from "gatsby-image";
 import { Text, Flex } from "rebass";
 import { FormattedMessage } from "react-intl";
 import { Container } from "../";
+import { A11yHideBox } from "../../../utils/helpers"
 
 const bounce = keyframes`
   0% {
@@ -98,6 +99,7 @@ export const Hero = ({ image }) => (
       </Container>
 
       <DropdownLink href="#header">
+        <A11yHideBox>Scroll to bottom</A11yHideBox>
         <svg
           viewBox="0 0 24 24"
           width="24"
