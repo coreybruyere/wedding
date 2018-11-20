@@ -18,6 +18,14 @@ module.exports = {
     //   }
     // },
     {
+      resolve: "gatsby-plugin-web-font-loader",
+      options: {
+        google: {
+          families: ["Satisfy", "Vollkorn"]
+        }
+      }
+    },
+    {
       resolve: `gatsby-plugin-typography`,
       options: {
         pathToConfigModule: `src/utils/typography`
