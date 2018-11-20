@@ -9,7 +9,7 @@ import { Navbar, Link as LinkItem, Head, HeadTitle } from "./styles";
 const Header = ({ hero }) => (
   <Context.Consumer>
     {({ toggleLanguage, lang }) => (
-      <Head hero={hero}>
+      <Head hero={hero} id="header">
         <Navbar flexDirection="column" py={4} as={Container}>
           <Flex flexDirection="column" alignItems="center">
             <HeadTitle>Our Wedding</HeadTitle>

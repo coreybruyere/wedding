@@ -1,9 +1,19 @@
 import React from "react";
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import Img from "gatsby-image";
 import { Text, Flex } from "rebass";
 import { FormattedMessage } from "react-intl";
 import { Container } from "../";
+
+const bounce = keyframes`
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  100% {
+    transform: translate3d(0, .5rem, 0);
+  }
+`;
 
 const Copy = styled(Flex)`
   position: absolute;
@@ -51,7 +61,18 @@ const Inline = styled(Flex)`
   }
 `;
 
-const DropdownIcon = styled.svg``;
+const DropdownLink = styled.a`
+  position: absolute;
+  bottom: 1rem;
+  animation: ${bounce} 0.75s;
+  animation-direction: alternate;
+  animation-timing-function: cubic-bezier(.5, 0.05, 1, .5);
+  animation-iteration-count: infinite;
+
+  @media only screen and (min-width: 52em) {
+    display: none;
+  }
+`;
 
 export const Hero = ({ image }) => (
   <>
@@ -76,14 +97,16 @@ export const Hero = ({ image }) => (
         </Inline>
       </Container>
 
-      <DropdownIcon
-        viewBox="0 0 24 24"
-        width="24"
-        height="24"
-        fill="currentcolor"
-      >
-        <path d="M7.4,8l4.6,4.6L16.6,8L18,9.4l-6,6l-6-6L7.4,8z" />
-      </DropdownIcon>
+      <DropdownLink href="#header">
+        <svg
+          viewBox="0 0 24 24"
+          width="24"
+          height="24"
+          fill="#fff"
+        >
+          <path d="M7.4,8l4.6,4.6L16.6,8L18,9.4l-6,6l-6-6L7.4,8z" />
+        </svg>
+      </DropdownLink>
     </Copy>
   </>
 );
