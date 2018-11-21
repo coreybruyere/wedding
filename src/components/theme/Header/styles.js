@@ -44,7 +44,7 @@ export const Navbar = styled(Flex)`
 export const Link = styled(Text)`
   position: relative;
   padding: 0 0.25rem;
-  margin: 0 0.25rem 1.5rem;
+  margin: 0 0.5rem 1.5rem;
   color: #40461b;
   text-decoration: none;
   font-weight: 400;

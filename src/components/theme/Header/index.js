@@ -18,7 +18,7 @@ const Header = ({ hero }) => (
           <Flex
             flexDirection={["row", "row", "column"]}
             flexWrap={["wrap", "wrap", "nowrap"]}
-            justifyContent={["space-around", "space-around", "center"]}
+            justifyContent={["center", "space-around", "center"]}
             mt={[4, 4, "auto"]}
             pb={[0, 0, 5]}
             alignItems="center"
@@ -29,11 +29,11 @@ const Header = ({ hero }) => (
             <LinkItem as={Link} to="/rsvp">
               <FormattedMessage id="rsvp" />
             </LinkItem>
-            <LinkItem as={Link} to="/details">
-              <FormattedMessage id="wedding details" />
-            </LinkItem>
             <LinkItem as={Link} to="/registry">
               <FormattedMessage id="registry" />
+            </LinkItem>
+            <LinkItem as={Link} to="/details">
+              <FormattedMessage id="wedding details" />
             </LinkItem>
           </Flex>
           <Box mt="auto">
