@@ -26,7 +26,7 @@ const Copy = styled(Flex)`
   width: 100%;
 
   @media only screen and (min-width: 52em) {
-    width: calc(100% - 29vw);
+    width: calc(100% - 25vw);
   }
 `;
 
