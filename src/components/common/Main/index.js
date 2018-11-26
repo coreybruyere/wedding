@@ -11,16 +11,16 @@ const heroStyle = `
 `;
 
 const pageStyle = `
-  @media only screen and (min-width: 112em) {
-    &:after {
-      content: "That's a MASSIVE monitor. Maybe scale your browser down so you can see everything 😬";
-      display: block;
-      font-family: "Satisfy", cursive;
-      font-size: 1.5rem;
-      padding-left: 2rem;
-      padding-top: 2rem;
-    }
-  }
+  // @media only screen and (min-width: 118em) {
+  //   &:after {
+  //     content: "That's a MASSIVE monitor. Maybe scale your browser down so you can see everything 😬";
+  //     display: block;
+  //     font-family: "Satisfy", cursive;
+  //     font-size: 1.5rem;
+  //     padding-left: 2rem;
+  //     padding-top: 2rem;
+  //   }
+  // }
 `;
 
 export const Main = styled(Box).attrs({
