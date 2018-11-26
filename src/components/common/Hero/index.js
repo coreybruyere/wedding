@@ -22,11 +22,27 @@ const Copy = styled(Flex)`
   left: 0;
   bottom: 0;
   z-index: 1;
-  color: #fff;
   width: 100%;
+  padding: 1rem;
+  color: #fff;
+
+  &:after {
+    position: absolute;
+    width: calc(100% - 2rem);
+    height: calc(100% - 2rem);
+    padding: 1rem;
+    border: 4px solid #fff;
+    content: '';
+  }
 
   @media only screen and (min-width: 52em) {
     width: calc(100% - 25vw);
+    padding: 4rem;
+
+    &:after {
+      width: calc(100% - 3rem);
+      height: calc(100% - 3rem);
+    }
   }
 `;
 
@@ -64,7 +80,7 @@ const Inline = styled(Flex)`
 
 const DropdownLink = styled.a`
   position: absolute;
-  bottom: 1rem;
+  bottom: 1.75rem;
   animation: ${bounce} 0.75s;
   animation-direction: alternate;
   animation-timing-function: cubic-bezier(.5, 0.05, 1, .5);
@@ -86,12 +102,13 @@ export const Hero = ({ image }) => (
             <FormattedMessage id="corey-tori" />
           </Text>
           <Flex
+            flexWrap="wrap"
             justifyContent={["space-around", "space-around", "space-between"]}
           >
-            <Text fontSize={[3, 4]} as="h2">
+            <Text fontSize={[3, 4]} as="h2" pr={1}>
               6/30/2019
             </Text>
-            <Text fontSize={[3, 4]} as="h2">
+            <Text fontSize={[3, 4]} as="h2" pl={1}>
               Fullerton, CA
             </Text>
           </Flex>
