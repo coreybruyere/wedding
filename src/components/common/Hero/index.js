@@ -4,7 +4,7 @@ import Img from "gatsby-image";
 import { Text, Flex } from "rebass";
 import { FormattedMessage } from "react-intl";
 import { Container } from "../";
-import { A11yHideBox } from "../../../utils/helpers"
+import { A11yHideBox } from "../../../utils/helpers";
 
 const bounce = keyframes`
   0% {
@@ -32,7 +32,7 @@ const Copy = styled(Flex)`
     height: calc(100% - 2rem);
     padding: 1rem;
     border: 4px solid #fff;
-    content: '';
+    content: "";
   }
 
   @media only screen and (min-width: 52em) {
@@ -83,7 +83,7 @@ const DropdownLink = styled.a`
   bottom: 1.75rem;
   animation: ${bounce} 0.75s;
   animation-direction: alternate;
-  animation-timing-function: cubic-bezier(.5, 0.05, 1, .5);
+  animation-timing-function: cubic-bezier(0.5, 0.05, 1, 0.5);
   animation-iteration-count: infinite;
 
   @media only screen and (min-width: 52em) {
@@ -99,7 +99,7 @@ export const Hero = ({ image }) => (
       <Container mr="auto" ml={0} hero>
         <Inline flexDirection="column" pt={[3, 3, 0]}>
           <Text fontSize={[6, 8]} as="h1">
-            <FormattedMessage id="corey-tori" />
+            <FormattedMessage id="corey_tori" />
           </Text>
           <Flex
             flexWrap="wrap"
@@ -117,12 +117,7 @@ export const Hero = ({ image }) => (
 
       <DropdownLink href="#header">
         <A11yHideBox>Scroll to bottom</A11yHideBox>
-        <svg
-          viewBox="0 0 24 24"
-          width="24"
-          height="24"
-          fill="#fff"
-        >
+        <svg viewBox="0 0 24 24" width="24" height="24" fill="#fff">
           <path d="M7.4,8l4.6,4.6L16.6,8L18,9.4l-6,6l-6-6L7.4,8z" />
         </svg>
       </DropdownLink>

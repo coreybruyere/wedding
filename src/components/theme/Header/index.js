@@ -33,7 +33,7 @@ const Header = ({ hero }) => (
               <FormattedMessage id="registry" />
             </LinkItem>
             <LinkItem as={Link} to="/details">
-              <FormattedMessage id="wedding details" />
+              <FormattedMessage id="wedding_details" />
             </LinkItem>
           </Flex>
           <Box mt="auto">

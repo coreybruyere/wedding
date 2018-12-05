@@ -3,7 +3,7 @@
   "logo": "Logo",
   "home": "Casa",
 
-  "wedding details": "Detalles de la boda",
+  "wedding_details": "Detalles de la boda",
   "registry": "Registro",
   "rsvp": "RSVP",
   "thanks!": "¡Gracias!",
@@ -13,11 +13,24 @@
   "will_you_attend": "¿Asistirás?",
   "song_requests": "Solicitudes de canciones",
   "message": "Mensaje",
-  "rsvp-thanks": "¡ Gracias por su RSVP!No dude en ponerse en contacto con nosotros si tiene alguna preguntas!",
+  "rsvp_thanks": "¡ Gracias por su RSVP!No dude en ponerse en contacto con nosotros si tiene alguna preguntas!",
 
   "submit": "Enviar",
   "yes": "Sí",
   "no": "No",
 
-  "corey-tori": "Corey & Tori"
+  "corey_tori": "Corey & Tori",
+
+  "venue": "Lugar de encuentro",
+  "wedding_reception": "Recepción de la boda",
+  "schedule": "Programar",
+  "ceremony": "Ceremonia",
+  "ceremony_details": "Llegar a las 4:30",
+  "reception": "Recepción",
+  "reception_details": "Estaremos echando a todos fuera de la pista de baile a la medianoche.",
+
+  "notifications": "Notificaciones",
+  "text": "Texto",
+  "to": "a",
+  "sms_instruction": "para recibir un recordatorio o dos para confirmar su asistencia a nuestra boda junto con cualquier otro detalle relevante para el gran día! No te preocupes, puedes detener las notificaciones en cualquier momento."
 }

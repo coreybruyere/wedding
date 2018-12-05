@@ -18,7 +18,7 @@ const SuccessPage = () => (
 
           <Section>
             <Text as="p">
-              <FormattedMessage id="rsvp-thanks" />
+              <FormattedMessage id="rsvp_thanks" />
             </Text>
           </Section>
         </Container>

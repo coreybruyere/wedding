@@ -3,7 +3,7 @@
   "logo": "Logo",
   "home": "Home",
 
-  "wedding details": "Wedding Details",
+  "wedding_details": "Wedding Details",
   "registry": "Registry",
   "rsvp": "RSVP",
   "thanks!": "Thanks!",
@@ -13,11 +13,24 @@
   "will_you_attend": "Will you be attending?",
   "song_requests": "Song requests",
   "message": "Message",
-  "rsvp-thanks": "Thank you for your RSVP! Feel free to contact us if you have any questions!",
+  "rsvp_thanks": "Thank you for your RSVP! Feel free to contact us if you have any questions!",
 
   "submit": "Submit",
   "yes": "Yes",
   "no": "No",
 
-  "corey-tori": "Corey & Tori"
+  "corey_tori": "Corey & Tori",
+
+  "venue": "Venue",
+  "wedding_reception": "Wedding & Reception",
+  "schedule": "Schedule",
+  "ceremony": "Ceremony",
+  "ceremony_details": "Arrive by 4:30",
+  "reception": "Reception",
+  "reception_details": "We'll be kicking everyone off the dance floor at midnight",
+
+  "notifications": "Notifications",
+  "text": "Text",
+  "to": "to",
+  "sms_instruction": "to receive a reminder or two to RSVP for our wedding along with any other relevant details for the big day! Don't worry, you're able to stop notifications at anytime."
 }

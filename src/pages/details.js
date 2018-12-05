@@ -8,23 +8,23 @@ import Header from "../components/theme/Header";
 const DetailsPage = () => (
   <Layout>
     <React.Fragment>
-      <SEO title="wedding details" />
+      <SEO title="wedding_details" />
       <Header />
       <Main>
         <Container>
           <Text as="h1" mb={5}>
-            <FormattedMessage id="wedding details" />
+            <FormattedMessage id="wedding_details" />
           </Text>
 
           <Section>
             <Text as="h2">
-              {/* <FormattedMessage id="schedule" /> */}
-              Venue
+              <FormattedMessage id="venue" />
             </Text>
 
             <dl>
-              {/* <FormattedMessage id="schedule" /> */}
-              <dt>Wedding & Reception </dt>
+              <dt>
+                <FormattedMessage id="wedding_reception" />
+              </dt>
               <dd>
                 {" "}
                 Hangar 21
@@ -38,17 +38,37 @@ const DetailsPage = () => (
 
           <Section>
             <Text as="h2">
-              {/* <FormattedMessage id="schedule" /> */}
-              Schedule
+              <FormattedMessage id="schedule" />
             </Text>
 
             <dl>
-              <dt>Wedding</dt>
-              <dd>[[Info & time for Wedding - Make sure to translate]]</dd>
+              <dt>
+                <FormattedMessage id="ceremony" />
+              </dt>
+              <dd>
+                <FormattedMessage id="ceremony_details" />
+              </dd>
 
-              <dt>Reception</dt>
-              <dd>[[Info & time for Wedding - Make sure to translate]]</dd>
+              <dt>
+                <FormattedMessage id="reception" />
+              </dt>
+              <dd>
+                <FormattedMessage id="reception_details" />
+              </dd>
             </dl>
+          </Section>
+
+          <Section>
+            <Text as="h2">
+              <FormattedMessage id="notifications" />
+            </Text>
+
+            <Text as="p">
+              <FormattedMessage id="text" /> "<strong>Hi</strong>"{" "}
+              <FormattedMessage id="to" />{" "}
+              <a href="sms://+15626557028">562-655-7028</a>{" "}
+              <FormattedMessage id="sms_instruction" />
+            </Text>
           </Section>
         </Container>
       </Main>
