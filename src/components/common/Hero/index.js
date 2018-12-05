@@ -85,6 +85,7 @@ const DropdownLink = styled.a`
   animation-direction: alternate;
   animation-timing-function: cubic-bezier(0.5, 0.05, 1, 0.5);
   animation-iteration-count: infinite;
+  z-index: 10;
 
   @media only screen and (min-width: 52em) {
     display: none;

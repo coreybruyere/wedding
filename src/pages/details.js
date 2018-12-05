@@ -1,7 +1,7 @@
 import React from "react";
 import { Text } from "rebass";
 import { FormattedMessage } from "react-intl";
-import { Layout, Container, Main, Section } from "../components/common";
+import { Layout, Link, Container, Main, Section } from "../components/common";
 import SEO from "../components/common/SEO";
 import Header from "../components/theme/Header";
 
@@ -66,7 +66,7 @@ const DetailsPage = () => (
             <Text as="p">
               <FormattedMessage id="text" /> "<strong>Hi</strong>"{" "}
               <FormattedMessage id="to" />{" "}
-              <a href="sms://+15626557028">562-655-7028</a>{" "}
+              <Link href="sms://+15626557028">562-655-7028</Link>{" "}
               <FormattedMessage id="sms_instruction" />
             </Text>
           </Section>

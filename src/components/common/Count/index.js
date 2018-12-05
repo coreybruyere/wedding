@@ -2,6 +2,7 @@ import React from "react";
 import styled, { keyframes } from "styled-components";
 import Countdown from "react-countdown-now";
 import { Flex, Text } from "rebass";
+import { FormattedMessage } from "react-intl";
 
 const fadeIn = keyframes`
   0% {
@@ -42,7 +43,7 @@ const renderer = ({ days, hours, minutes, completed }) => {
         <Time fontSize={6} pr={1}>
           {days}
         </Time>{" "}
-        Days
+        <FormattedMessage id="days" />
       </CountWrap>
     );
   }
