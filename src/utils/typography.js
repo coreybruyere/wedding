@@ -12,7 +12,7 @@ const typography = new Typography({
       fontFamily: ["Vollkorn", "Arial", "serif"].join(",")
     },
     h1: {
-      fontSize: rhythm(2),
+      fontSize: rhythm(2.5),
       transform: "rotate(-2deg)"
     },
     "h3, h4, h5": {
