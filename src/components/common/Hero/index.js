@@ -96,7 +96,12 @@ export const Hero = ({ image }) => (
   <>
     <Image fluid={image} />
 
-    <Copy flexDirection="column" justifyContent="center" alignItems="center">
+    <Copy
+      flexDirection="column"
+      justifyContent={["space-evenly", "space-evenly", "center"]}
+      alignItems="center"
+    >
+      <span>&nbsp;</span>
       <Container mr="auto" ml={0} hero>
         <Inline flexDirection="column" pt={[3, 3, 0]}>
           <Text fontSize={[6, 8]} as="h1">

@@ -12,7 +12,7 @@ export const Section = styled(Box)`
 
 Section.defaultProps = {
   pt: 5,
-  px: 5,
+  px: [0, 3, 5],
   pb: 4,
   as: "section"
 };
