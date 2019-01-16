@@ -1,7 +1,14 @@
 import React from "react";
-import { Text } from "rebass";
+import { Text, Flex, Box } from "rebass";
 import { FormattedMessage } from "react-intl";
-import { Layout, Link, Container, Main, Section } from "../components/common";
+import {
+  Layout,
+  Button,
+  Link,
+  Container,
+  Main,
+  Section
+} from "../components/common";
 import SEO from "../components/common/SEO";
 import Header from "../components/theme/Header";
 
@@ -34,6 +41,23 @@ const DetailsPage = () => (
                 Fullerton, CA 92833
               </dd>
             </dl>
+
+            <Flex mx={[0, -3, -5]} flexWrap="wrap" justifyContent="center">
+              <Box mx={1}>
+                <Button as="a" href="https://goo.gl/maps/uvY4b9oRgNC2">
+                  Google Maps
+                </Button>
+              </Box>
+
+              <Box mx={1}>
+                <Button
+                  as="a"
+                  href="https://www.waze.com/ul?ll=33.87318440%2C-117.97925060&navigate=yes&zoom=16"
+                >
+                  Waze
+                </Button>
+              </Box>
+            </Flex>
           </Section>
 
           <Section>
