@@ -76,6 +76,10 @@ class RSVPPage extends React.Component {
                 <FormattedMessage id="rsvp" />
               </Text>
 
+              <Text as="p">
+                <FormattedMessage id="rsvp_deadline" />
+              </Text>
+
               <form
                 name="rsvp"
                 method="post"
