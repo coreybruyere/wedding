@@ -11,12 +11,12 @@ const Header = ({ hero }) => (
     {({ toggleLanguage, lang }) => (
       <Head hero={hero} id="header">
         <Navbar flexDirection="column" py={4} as={Container}>
-          <Flex flexDirection="column" alignItems="center">
+          <Count date={`2019-06-30T00:00:00`} />
+          <Flex flexDirection="column" alignItems="center" pt={1}>
             <HeadTitle>
               <FormattedMessage id="our_wedding" />
             </HeadTitle>
           </Flex>
-          <Count date={`2019-06-30T00:00:00`} />
           <Flex
             flexDirection={["row", "row", "column"]}
             flexWrap={["wrap", "wrap", "nowrap"]}
@@ -25,16 +25,16 @@ const Header = ({ hero }) => (
             pb={[0, 0, 5]}
             alignItems="center"
           >
-            <LinkItem as={Link} mb={4} to="/">
+            <LinkItem as={Link} mb={4} mx={2} to="/">
               <FormattedMessage id="home" />
             </LinkItem>
-            <LinkItem as={Link} mb={4} to="/rsvp">
+            <LinkItem as={Link} mb={4} mx={2} to="/rsvp">
               <FormattedMessage id="rsvp" />
             </LinkItem>
-            <LinkItem as={Link} mb={4} to="/registry">
+            <LinkItem as={Link} mb={4} mx={2} to="/registry">
               <FormattedMessage id="registry" />
             </LinkItem>
-            <LinkItem as={Link} mb={4} to="/details">
+            <LinkItem as={Link} mb={4} mx={2} to="/details">
               <FormattedMessage id="wedding_details" />
             </LinkItem>
           </Flex>
