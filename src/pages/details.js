@@ -23,7 +23,7 @@ const DetailsPage = () => (
             <FormattedMessage id="wedding_details" />
           </Text>
 
-          <Section>
+          <Section id="venue">
             <Text as="h2">
               <FormattedMessage id="venue" />
             </Text>
@@ -60,7 +60,7 @@ const DetailsPage = () => (
             </Flex>
           </Section>
 
-          <Section>
+          <Section id="schedule">
             <Text as="h2">
               <FormattedMessage id="schedule" />
             </Text>
@@ -82,7 +82,7 @@ const DetailsPage = () => (
             </dl>
           </Section>
 
-          <Section>
+          <Section id="notifications">
             <Text as="h2">
               <FormattedMessage id="notifications" />
             </Text>
