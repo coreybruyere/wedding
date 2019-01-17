@@ -1,9 +1,10 @@
 import styled from "styled-components";
+import { Box } from "rebass";
 
-export const Link = styled.a`
+export const Link = styled(Box)`
   position: relative;
-  padding: 0 0.25rem;
-  margin: 0 0.5rem 1.5rem;
+  /* padding: 0 0.15rem; */
+  /* margin: 0 0.5rem 1.5rem; */
   color: #40461b;
   text-decoration: none;
   font-weight: 400;
@@ -20,10 +21,10 @@ export const Link = styled.a`
     content: "";
     position: absolute;
     height: 0.35rem;
-    width: 110%;
+    width: 103%;
     bottom: 0;
-    left: -5%;
-    right: -5%;
+    left: -3%;
+    right: -3%;
     transition: height 0.2s ease-in-out;
     background: repeating-linear-gradient(
       116deg,
@@ -36,3 +37,7 @@ export const Link = styled.a`
     );
   }
 `;
+
+Link.defaultProps = {
+  as: "a"
+};

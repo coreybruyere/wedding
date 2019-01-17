@@ -25,16 +25,16 @@ const Header = ({ hero }) => (
             pb={[0, 0, 5]}
             alignItems="center"
           >
-            <LinkItem as={Link} to="/">
+            <LinkItem as={Link} mb={4} to="/">
               <FormattedMessage id="home" />
             </LinkItem>
-            <LinkItem as={Link} to="/rsvp">
+            <LinkItem as={Link} mb={4} to="/rsvp">
               <FormattedMessage id="rsvp" />
             </LinkItem>
-            <LinkItem as={Link} to="/registry">
+            <LinkItem as={Link} mb={4} to="/registry">
               <FormattedMessage id="registry" />
             </LinkItem>
-            <LinkItem as={Link} to="/details">
+            <LinkItem as={Link} mb={4} to="/details">
               <FormattedMessage id="wedding_details" />
             </LinkItem>
           </Flex>

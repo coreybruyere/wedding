@@ -19,7 +19,8 @@ const typography = new Typography({
       marginBottom: rhythm(1 / 2)
     },
     body: {
-      color: "#454130"
+      color: "#454130",
+      wordSpacing: "2px"
     }
   })
 });
