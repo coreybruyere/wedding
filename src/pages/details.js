@@ -82,6 +82,18 @@ const DetailsPage = () => (
             </dl>
           </Section>
 
+          <Section id="accommodations">
+            <Text as="h2">
+              <FormattedMessage id="accommodations" />
+            </Text>
+
+            <Text as="p">
+              <FormattedMessage id="accommodation_details1" />
+              <Link href="sms://+15626557028">714-635-9000</Link>{" "}
+              <FormattedMessage id="accommodation_details2" />
+            </Text>
+          </Section>
+
           <Section id="notifications">
             <Text as="h2">
               <FormattedMessage id="notifications" />
