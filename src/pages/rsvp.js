@@ -215,7 +215,7 @@ class RSVPPage extends React.Component {
                           <FormattedMessage id="message" />
                         </Text>
                         <Field>
-                          <Textarea name="songs" onChange={this.handleChange} />
+                          <Textarea name="message" onChange={this.handleChange} />
                         </Field>
                       </Label>
                     </Field>
