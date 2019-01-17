@@ -40,5 +40,8 @@
   "notifications": "Notifications",
   "text": "Text",
   "to": "to",
-  "sms_instruction": "to receive a reminder or two to RSVP for our wedding along with any other relevant details for the big day! Don't worry, you're able to stop notifications at anytime."
+  "sms_instruction": "to receive a reminder or two to RSVP for our wedding along with any other relevant details for the big day! Don't worry, you're able to stop notifications at anytime.",
+
+  "contact": "Contact",
+  "contact_details": "If you have any questions or concerns feel free to reach out to Tori or Corey."
 }

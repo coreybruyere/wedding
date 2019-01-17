@@ -40,5 +40,8 @@
   "notifications": "Notificaciones",
   "text": "Texto",
   "to": "a",
-  "sms_instruction": "para recibir un recordatorio o dos para confirmar su asistencia a nuestra boda junto con cualquier otro detalle relevante para el gran día! No te preocupes, puedes detener las notificaciones en cualquier momento."
+  "sms_instruction": "para recibir un recordatorio o dos para confirmar su asistencia a nuestra boda junto con cualquier otro detalle relevante para el gran día! No te preocupes, puedes detener las notificaciones en cualquier momento.",
+
+  "contact": "Contacto",
+  "contact_details": "Si tiene alguna pregunta o inquietud, no dude en comunicarse con Tori o Corey."
 }

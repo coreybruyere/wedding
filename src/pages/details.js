@@ -1,4 +1,6 @@
 import React from "react";
+import { graphql } from "gatsby";
+import Img from "gatsby-image";
 import { Text, Flex, Box } from "rebass";
 import { FormattedMessage } from "react-intl";
 import {
@@ -12,7 +14,7 @@ import {
 import SEO from "../components/common/SEO";
 import Header from "../components/theme/Header";
 
-const DetailsPage = () => (
+const DetailsPage = props => (
   <Layout>
     <React.Fragment>
       <SEO title="wedding_details" />
@@ -106,6 +108,54 @@ const DetailsPage = () => (
               <FormattedMessage id="sms_instruction" />
             </Text>
           </Section>
+
+          <Section id="contact">
+            <Text as="h2">
+              <FormattedMessage id="contact" />
+            </Text>
+
+            <Text as="p">
+              <FormattedMessage id="contact_details" />
+            </Text>
+
+            <Flex as="address" flexWrap="wrap">
+              <Box width={[1, 1, 0.5]} mb={2}>
+                <Flex
+                  css={{ textAlign: "left" }}
+                  alignItems="center"
+                  flexWrap="wrap"
+                >
+                  <Img fixed={props.data.coreyImage.childImageSharp.fixed} />
+                  <Box as="dl" m={0}>
+                    <dt>Corey</dt>
+                    <Box as="dd" m={0}>
+                      <Link href="mailto:hello@coreybruyere.com">
+                        hello@coreybruyere.com
+                      </Link>
+                    </Box>
+                  </Box>
+                </Flex>
+              </Box>
+
+              <Box width={[1, 1, 0.5]} mb={2}>
+                <Flex
+                  css={{ textAlign: "left" }}
+                  alignItems="center"
+                  flexWrap="wrap"
+                >
+                  <Img fixed={props.data.toriImage.childImageSharp.fixed} />
+                  <Box as="dl" m={0}>
+                    <dt>Tori</dt>
+                    <Box as="dd" m={0}>
+                      <Link href="mailto:victoria.tombor@gmail.com">
+                        victoria.tombor@gmail.com
+                      </Link>
+                    </Box>
+                  </Box>
+                </Flex>
+              </Box>
+            </Flex>
+          </Section>
         </Container>
       </Main>
     </React.Fragment>
@@ -113,3 +163,22 @@ const DetailsPage = () => (
 );
 
 export default DetailsPage;
+
+export const pageQuery = graphql`
+  query {
+    toriImage: file(relativePath: { eq: "contact-tori.png" }) {
+      childImageSharp {
+        fixed(width: 108, height: 108) {
+          ...GatsbyImageSharpFixed
+        }
+      }
+    }
+    coreyImage: file(relativePath: { eq: "contact-corey.png" }) {
+      childImageSharp {
+        fixed(width: 108, height: 108) {
+          ...GatsbyImageSharpFixed
+        }
+      }
+    }
+  }
+`;
