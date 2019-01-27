@@ -39,10 +39,6 @@ const RegistryPage = props => (
                 width={[1, 1, 1, 0.5]}
               >
                 <Text as="p">
-                  Here you'll find a list of honeymoon funds that'll help pay
-                  for our airfare, a few romantic dinners, some tours we'd like
-                  to take, and lodging for most of our trip in Budapest and
-                  Italy.
                   <FormattedMessage id="registry_vacation" />
                 </Text>
 
