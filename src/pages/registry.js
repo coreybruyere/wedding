@@ -48,7 +48,7 @@ const RegistryPage = props => (
               </LinkCard>
 
               <LinkCard
-                href="https://www.target.com/gift-registry/gift/corey-tori-2019/"
+                href="https://www.target.com/gift-registry/gift/corey-tori-2019"
                 image={props.data.targetImage.childImageSharp.fluid}
                 width={[1, 1, 1, 0.5]}
               >
