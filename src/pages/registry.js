@@ -1,11 +1,19 @@
 import React from "react";
-import { Text, Card, Flex } from "rebass";
+import { graphql } from "gatsby";
+import { Text, Box, Flex } from "rebass";
 import { FormattedMessage } from "react-intl";
-import { Layout, Container, Main, Section } from "../components/common";
+import {
+  Layout,
+  Container,
+  Main,
+  Section,
+  LinkCard,
+  Button
+} from "../components/common";
 import SEO from "../components/common/SEO";
 import Header from "../components/theme/Header";
 
-const RegistryPage = () => (
+const RegistryPage = props => (
   <Layout>
     <React.Fragment>
       <SEO title="registry" />
@@ -21,40 +29,41 @@ const RegistryPage = () => (
               <FormattedMessage id="registry_details" />
             </Text>
 
-            <Flex flexWrap="wrap">
-              <Card
-                width={1}
-                mb={4}
-                bg="#fff"
-                color="#403b32"
-                borderRadius={8}
-                border="4px solid"
-                borderColor="rgba(253,0,34,0.25098)"
-                boxShadow="0 2px 16px rgba(0,0,0,0.25)"
-                as="a"
-                target="_blank"
+            <Flex
+              alignItems="center"
+              flexWrap={["wrap", "wrap", "wrap", "nowrap"]}
+            >
+              <LinkCard
                 href="https://www.zola.com/registry/coreyandtori2019"
-                css={{ textDecoration: "none" }}
+                image={props.data.vacationImage.childImageSharp.fluid}
+                width={[1, 1, 1, 0.5]}
               >
-                Honeymoon Cash Fund
-              </Card>
+                <Text as="p">
+                  Here you'll find a list of honeymoon funds that'll help pay
+                  for our airfare, a few romantic dinners, some tours we'd like
+                  to take, and lodging for most of our trip in Budapest and
+                  Italy.
+                  <FormattedMessage id="registry_vacation" />
+                </Text>
 
-              <Card
-                width={1}
-                mb={4}
-                bg="#fff"
-                color="#403b32"
-                borderRadius={8}
-                border="4px solid"
-                borderColor="rgba(253,0,34,0.25098)"
-                boxShadow="0 2px 16px rgba(0, 0, 0, 0.25)"
-                as="a"
-                target="_blank"
+                <Button as="span">
+                  <FormattedMessage id="registry_vacation_cta" />
+                </Button>
+              </LinkCard>
+
+              <LinkCard
                 href="https://www.target.com/gift-registry/gift/corey-tori-2019/"
-                css={{ textDecoration: "none" }}
+                image={props.data.targetImage.childImageSharp.fluid}
+                width={[1, 1, 1, 0.5]}
               >
-                Target Registry
-              </Card>
+                <Text as="p">
+                  <FormattedMessage id="registry_target" />
+                </Text>
+
+                <Button as="span">
+                  <FormattedMessage id="registry_target_cta" />
+                </Button>
+              </LinkCard>
             </Flex>
           </Section>
         </Container>
@@ -64,3 +73,23 @@ const RegistryPage = () => (
 );
 
 export default RegistryPage;
+
+export const pageQuery = graphql`
+  query {
+    targetImage: file(relativePath: { eq: "target2.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 1200) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+
+    vacationImage: file(relativePath: { eq: "vacation2.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 1200) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+  }
+`;

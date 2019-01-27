@@ -14,3 +14,4 @@ export * from "./Label";
 export * from "./Radio";
 export * from "./Link";
 export * from "./Count";
+export * from "./LinkCard";
