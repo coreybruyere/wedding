@@ -6,7 +6,7 @@ import { FormattedMessage } from "react-intl";
 
 const AnimatedCard = styled(Card)`
   display: block;
-  transition: transform 0.35s ease-in-out;
+  transition: transform 0.35s ease-in-out, box-shadow 0.35s ease-in-out;
   overflow: hidden;
   cursor: pointer;
 
@@ -29,13 +29,13 @@ const AnimatedCard = styled(Card)`
   &:last-of-type {
     &:hover,
     &:active {
-      transform: rotate(-1deg) scale(1.02);
+      transform: rotate(1deg) scale(1.02);
     }
   }
 
   &:hover,
   &:active {
-    z-index: 3;
+    box-shadow: 0 2px 28px rgba(0,0,0,0.21);
   }
 
   @media only screen and (min-width: 72em) {
