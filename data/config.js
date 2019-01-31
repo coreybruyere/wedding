@@ -1,9 +1,9 @@
 module.exports = {
   title: "Corey + Tori Wedding",
-  logo: "https://i18n.smakosh.com/favicon/logo-48.png",
-  url: "https://i18n.smakosh.com",
-  favicon: "https://i18n.smakosh.com/favicon/logo-48.png",
-  cover: "https://i18n.smakosh.com/cover.jpg",
+  logo: "https://coreybruyere.com/app/uploads/2015/12/cropped-logo-favicon3-192x192.png",
+  url: "https://bruyerewedding.us/",
+  favicon: "https://coreybruyere.com/app/uploads/2015/12/cropped-logo-favicon3-192x192.png",
+  cover: "https://coreybruyere.com/app/uploads/2015/12/cropped-logo-favicon3-270x270.png",
   legalName: "Corey Bruyere",
   description: "Corey and Tori's wedding details, registry, and RSVP",
   socialLinks: {
