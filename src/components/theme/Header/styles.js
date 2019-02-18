@@ -34,7 +34,7 @@ export const Head = styled(Flex).attrs({
 `;
 
 export const HeadTitle = styled(Text)`
-  transform: rotate(1deg);
+  display: block;
 `;
 
 export const Navbar = styled(Flex)`

@@ -92,6 +92,14 @@ const DropdownLink = styled.a`
   }
 `;
 
+const VizHidden = styled.div`
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+`;
+
 export const Hero = ({ image }) => (
   <>
     <Image fluid={image} />
@@ -105,16 +113,17 @@ export const Hero = ({ image }) => (
       <Container mr="auto" ml={0} hero>
         <Inline flexDirection="column" pt={[3, 3, 0]}>
           <Text fontSize={[6, 8]} as="h1">
+            <VizHidden>Wedding of </VizHidden>
             <FormattedMessage id="corey_tori" />
           </Text>
           <Flex
             flexWrap="wrap"
             justifyContent={["space-around", "space-around", "space-between"]}
           >
-            <Text fontSize={[3, 4]} as="h2" pr={1}>
+            <Text fontSize={[3, 4]} as="strong" pr={1}>
               6/30/2019
             </Text>
-            <Text fontSize={[3, 4]} as="h2" pl={1}>
+            <Text fontSize={[3, 4]} as="strong" pl={1}>
               Fullerton, CA
             </Text>
           </Flex>
