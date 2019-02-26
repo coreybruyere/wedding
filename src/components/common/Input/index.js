@@ -9,7 +9,7 @@ export const Input = styled(Box)`
   color: inherit;
   font-size: 1em;
   background-color: #fbf9ed;
-  border-radius: 3px;
+  /* border-radius: 3px; */
   border-width: 1px;
   border-style: solid;
   border-color: #c3c3c3;

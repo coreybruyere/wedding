@@ -1,16 +1,17 @@
 import React from "react";
 import styled from "styled-components";
 import Img from "gatsby-image";
-import { Box, Card } from "rebass";
+import { Flex, Card } from "rebass";
 import { FormattedMessage } from "react-intl";
 
 const AnimatedCard = styled(Card)`
-  display: block;
+  display: flex;
+  flex-direction: column;
   transition: transform 0.35s ease-in-out, box-shadow 0.35s ease-in-out;
   overflow: hidden;
   cursor: pointer;
 
-  &:first-of-type {
+  /* &:first-of-type {
     transform: rotate(-1.35deg);
     z-index: 1;
   }
@@ -31,7 +32,7 @@ const AnimatedCard = styled(Card)`
     &:active {
       transform: rotate(1deg) scale(1.02);
     }
-  }
+  } */
 
   &:hover,
   &:active {
@@ -47,10 +48,11 @@ export const LinkCard = ({ image, href, children, ...rest }) => (
     mb={4}
     bg="#fff"
     color="#403b32"
-    borderRadius={8}
+    flex={1}
+    // borderRadius={8}
     border="1px solid"
     borderColor="#c3c3c3"
-    boxShadow="0 2px 16px rgba(0,0,0,0.25)"
+    // boxShadow="0 2px 16px rgba(0,0,0,0.25)"
     as="a"
     target="_blank"
     href={href}
@@ -58,6 +60,6 @@ export const LinkCard = ({ image, href, children, ...rest }) => (
     {...rest}
   >
     <Img fluid={image} />
-    <Box p={4}>{children}</Box>
+    <Flex flexDirection={"column"} p={4} flex={1}>{children}</Flex>
   </AnimatedCard>
 );

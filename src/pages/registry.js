@@ -30,36 +30,38 @@ const RegistryPage = props => (
             </Text>
 
             <Flex
-              alignItems="center"
-              flexWrap={["wrap", "wrap", "wrap", "nowrap"]}
+              flexWrap={["wrap", "wrap", "wrap", "wrap"]}
+              mx={-2}
             >
-              <LinkCard
-                href="https://www.zola.com/registry/coreyandtori2019"
-                image={props.data.vacationImage.childImageSharp.fluid}
-                width={[1, 1, 1, 0.5]}
-              >
-                <Text as="p">
-                  <FormattedMessage id="registry_vacation" />
-                </Text>
+              <Flex width={[1, 1, 1, .5]} px={2}>
+                <LinkCard
+                  href="https://www.zola.com/registry/coreyandtori2019"
+                  image={props.data.vacationImage.childImageSharp.fluid}
+                >
+                  <Text as="p">
+                    <FormattedMessage id="registry_vacation" />
+                  </Text>
 
-                <Button as="span">
-                  <FormattedMessage id="registry_vacation_cta" />
-                </Button>
-              </LinkCard>
+                  <Button as="div" mt="auto" mx="auto">
+                    <FormattedMessage id="registry_vacation_cta" />
+                  </Button>
+                </LinkCard>
+              </Flex>
 
-              <LinkCard
-                href="https://www.target.com/gift-registry/gift/corey-tori-2019"
-                image={props.data.targetImage.childImageSharp.fluid}
-                width={[1, 1, 1, 0.5]}
-              >
-                <Text as="p">
-                  <FormattedMessage id="registry_target" />
-                </Text>
+              <Flex width={[1, 1, 1, .5]} px={2}>
+                <LinkCard
+                  href="https://www.target.com/gift-registry/gift/corey-tori-2019"
+                  image={props.data.targetImage.childImageSharp.fluid}
+                >
+                  <Text as="p">
+                    <FormattedMessage id="registry_target" />
+                  </Text>
 
-                <Button as="span">
-                  <FormattedMessage id="registry_target_cta" />
-                </Button>
-              </LinkCard>
+                  <Button as="div" mt="auto" mx="auto">
+                    <FormattedMessage id="registry_target_cta" />
+                  </Button>
+                </LinkCard>
+              </Flex>
             </Flex>
           </Section>
         </Container>
