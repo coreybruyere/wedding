@@ -38,15 +38,20 @@ const DetailsPage = props => (
                 {" "}
                 Hangar 21
                 <br />
-                3970 Artesia Ave.
+                3815 W Commonwealth Ave.
                 <br />
                 Fullerton, CA 92833
               </dd>
             </dl>
 
-            <Flex mx={[0, -3, -5]} flexWrap="wrap" justifyContent="center">
+            <Flex
+              mx={[0, -3, -5]}
+              mb={4}
+              flexWrap="wrap"
+              justifyContent="center"
+            >
               <Box mx={1}>
-                <Button as="a" href="https://goo.gl/maps/uvY4b9oRgNC2">
+                <Button as="a" href="https://goo.gl/maps/cX1nqRWJ8cig36Ko9">
                   Google Maps
                 </Button>
               </Box>
@@ -54,12 +59,16 @@ const DetailsPage = props => (
               <Box mx={1}>
                 <Button
                   as="a"
-                  href="https://www.waze.com/ul?ll=33.87318440%2C-117.97925060&navigate=yes&zoom=16"
+                  href="https://www.waze.com/ul?ll=33.87046400%2C-117.97686740&navigate=yes&zoom=16"
                 >
                   Waze
                 </Button>
               </Box>
             </Flex>
+
+            <Box px={6} mb={4}>
+              <Img fluid={props.data.mapImage.childImageSharp.fluid} />
+            </Box>
           </Section>
 
           <Section id="schedule">
@@ -166,6 +175,13 @@ export default DetailsPage;
 
 export const pageQuery = graphql`
   query {
+    mapImage: file(relativePath: { eq: "map.png" }) {
+      childImageSharp {
+        fluid(maxWidth: 600) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
     toriImage: file(relativePath: { eq: "contact-tori.png" }) {
       childImageSharp {
         fixed(width: 108, height: 108) {
