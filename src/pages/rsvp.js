@@ -5,6 +5,7 @@ import { FormattedMessage } from "react-intl";
 import {
   Layout,
   Container,
+  Link,
   Main,
   Fieldset,
   Field,
@@ -77,7 +78,11 @@ class RSVPPage extends React.Component {
               </Text>
 
               <Text as="p">
-                <FormattedMessage id="rsvp_deadline" />
+                <FormattedMessage id="rsvp_deadline1" />
+                <Link href={"details/#contact"}>
+                  <FormattedMessage id="reach_out" />
+                </Link>
+                <FormattedMessage id="rsvp_deadline2" />
               </Text>
 
               <form
@@ -215,7 +220,10 @@ class RSVPPage extends React.Component {
                           <FormattedMessage id="message" />
                         </Text>
                         <Field>
-                          <Textarea name="message-text" onChange={this.handleChange} />
+                          <Textarea
+                            name="message-text"
+                            onChange={this.handleChange}
+                          />
                         </Field>
                       </Label>
                     </Field>

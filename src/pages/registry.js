@@ -29,17 +29,16 @@ const RegistryPage = props => (
               <FormattedMessage id="registry_details" />
             </Text>
 
-            <Flex
-              flexWrap={["wrap", "wrap", "wrap", "wrap"]}
-              mx={-2}
-            >
-              <Flex width={[1, 1, 1, .5]} px={2}>
+            <Flex flexWrap={["wrap", "wrap", "wrap", "wrap"]} mx={-2}>
+              <Flex width={[1, 1, 1, 0.5]} px={2}>
                 <LinkCard
                   href="https://www.zola.com/registry/coreyandtori2019"
                   image={props.data.vacationImage.childImageSharp.fluid}
                 >
                   <Text as="p">
-                    <FormattedMessage id="registry_vacation" />
+                    <small>
+                      <FormattedMessage id="registry_vacation" />
+                    </small>
                   </Text>
 
                   <Button as="div" mt="auto" mx="auto">
@@ -48,13 +47,15 @@ const RegistryPage = props => (
                 </LinkCard>
               </Flex>
 
-              <Flex width={[1, 1, 1, .5]} px={2}>
+              <Flex width={[1, 1, 1, 0.5]} px={2}>
                 <LinkCard
                   href="https://www.target.com/gift-registry/gift/corey-tori-2019"
                   image={props.data.targetImage.childImageSharp.fluid}
                 >
                   <Text as="p">
-                    <FormattedMessage id="registry_target" />
+                    <small>
+                      <FormattedMessage id="registry_target" />
+                    </small>
                   </Text>
 
                   <Button as="div" mt="auto" mx="auto">

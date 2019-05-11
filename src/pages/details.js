@@ -66,7 +66,7 @@ const DetailsPage = props => (
               </Box>
             </Flex>
 
-            <Box px={6} mb={4}>
+            <Box px={[0, 1, 4, 6]} mb={4}>
               <Img fluid={props.data.mapImage.childImageSharp.fluid} />
             </Box>
           </Section>

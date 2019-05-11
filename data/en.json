@@ -25,7 +25,9 @@
   "song_requests": "Song requests",
   "message": "Message",
   "rsvp_thanks": "Thank you for your RSVP! Feel free to contact us if you have any questions!",
-  "rsvp_deadline": "Please be sure to RSVP through this form by April 30, 2019 and feel free to reach out to Corey or Tori with any questions.",
+  "rsvp_deadline1": "Please be sure to RSVP through this form by May 30, 2019 and feel free to ",
+  "reach_out": "reach out ",
+  "rsvp_deadline2": "to Corey or Tori with any questions.",
 
   "submit": "Submit",
   "yes": "Yes",
